@@ -1,0 +1,645 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap");
+
+/* =====================================================================
+   BIMBELKU TIGABINANGA — JADWAL SISWA
+   Tema: "Buku catatan yang naik kelas"
+   ===================================================================== */
+
+/* =====================================================================
+   ROOT
+   ===================================================================== */
+
+:root {
+  --navy-900: #101d33;
+  --navy-800: #16274a;
+  --navy-700: #1f3563;
+  --navy-500: #35507f;
+
+  --ink: #1b2233;
+  --ink-soft: #5b6478;
+  --ink-faint: #8a91a3;
+
+  --paper: #fbfbfd;
+  --paper-tint: #eef1fa;
+  --paper-line: #dfe4f2;
+
+  --amber: #f0a93e;
+  --amber-deep: #d98a1f;
+  --amber-ink: #6b4508;
+
+  --mint: #2c9c73;
+  --mint-deep: #1f7d5c;
+
+  --white: #ffffff;
+
+  --shadow-sm: 0 2px 10px rgba(16, 29, 51, 0.06);
+  --shadow-md: 0 12px 32px rgba(16, 29, 51, 0.1);
+  --shadow-lg: 0 24px 60px rgba(16, 29, 51, 0.14);
+
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+}
+
+/* =====================================================================
+   CONTAINER
+   ===================================================================== */
+
+.jadwal-siswa-container {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 45px 5% 70px;
+
+  font-family: var(--font-body);
+  color: var(--ink);
+
+  /*
+     Background bergaris seperti halaman buku catatan.
+  */
+  background: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 43px,
+      rgba(31, 53, 99, 0.045) 44px
+    ),
+    var(--paper);
+
+  overflow-x: hidden;
+}
+
+/* =====================================================================
+   CARD UTAMA
+   ===================================================================== */
+
+.jadwal-siswa-card {
+  position: relative;
+
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 38px 40px 40px;
+
+  background: var(--white);
+
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-md);
+}
+
+/*
+   Garis amber seperti stabilo di bagian atas.
+*/
+
+.jadwal-siswa-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 32px;
+  right: 32px;
+
+  height: 4px;
+
+  background: var(--amber);
+
+  border-radius: 0 0 5px 5px;
+}
+
+/* =====================================================================
+   HEADER
+   ===================================================================== */
+
+.jadwal-siswa-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 32px;
+}
+
+/* =====================================================================
+   TITLE
+   ===================================================================== */
+
+.jadwal-siswa-title {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  color: var(--navy-900);
+}
+
+/*
+   Efek stabilo amber.
+*/
+
+.jadwal-siswa-title::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 1px;
+
+  height: 9px;
+
+  background: rgba(240, 169, 62, 0.4);
+
+  border-radius: 2px;
+
+  z-index: 0;
+}
+
+/*
+   Menjaga teks title berada di atas efek stabilo.
+*/
+
+.jadwal-siswa-title {
+  isolation: isolate;
+}
+
+.jadwal-siswa-title::after {
+  z-index: -1;
+}
+
+/* =====================================================================
+   SUBTITLE
+   ===================================================================== */
+
+.jadwal-siswa-subtitle {
+  margin-top: 9px;
+
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+
+  color: var(--ink-soft);
+
+  line-height: 1.6;
+}
+
+/* =====================================================================
+   TABLE WRAPPER
+   ===================================================================== */
+
+.jadwal-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-sm);
+
+  box-shadow: var(--shadow-sm);
+
+  /*
+     Scrollbar tetap halus.
+  */
+  scrollbar-width: thin;
+  scrollbar-color: var(--amber) var(--paper-tint);
+}
+
+/* =====================================================================
+   SCROLLBAR CHROME
+   ===================================================================== */
+
+.jadwal-table-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.jadwal-table-wrapper::-webkit-scrollbar-track {
+  background: var(--paper-tint);
+  border-radius: 10px;
+}
+
+.jadwal-table-wrapper::-webkit-scrollbar-thumb {
+  background: var(--amber);
+  border-radius: 10px;
+}
+
+/* =====================================================================
+   TABLE
+   ===================================================================== */
+
+.jadwal-table {
+  width: 100%;
+
+  min-width: 850px;
+
+  border-collapse: collapse;
+
+  background: var(--white);
+
+  font-family: var(--font-body);
+}
+
+/* =====================================================================
+   TABLE HEADER
+   ===================================================================== */
+
+.jadwal-table thead {
+  background: var(--navy-900);
+}
+
+.jadwal-table thead tr {
+  height: 58px;
+}
+
+.jadwal-table th {
+  padding: 15px 16px;
+
+  color: var(--white);
+
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  letter-spacing: 0.03em;
+
+  text-align: left;
+
+  white-space: nowrap;
+
+  border: none;
+}
+
+/*
+   Header kolom nomor dibuat lebih kecil.
+*/
+
+.jadwal-table th:first-child,
+.jadwal-table td:first-child {
+  width: 65px;
+
+  text-align: center;
+}
+
+/* =====================================================================
+   TABLE BODY
+   ===================================================================== */
+
+.jadwal-table tbody tr {
+  min-height: 62px;
+
+  border-bottom: 1px solid var(--paper-line);
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+/*
+   Efek hover seperti kertas yang disorot.
+*/
+
+.jadwal-table tbody tr:hover {
+  background: #fffaf0;
+}
+
+/* Baris terakhir tidak memiliki border bawah */
+
+.jadwal-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* =====================================================================
+   TABLE CELL
+   ===================================================================== */
+
+.jadwal-table td {
+  padding: 17px 16px;
+
+  font-size: 0.9rem;
+
+  color: var(--ink);
+
+  vertical-align: middle;
+
+  white-space: nowrap;
+}
+
+/* Nomor */
+
+.jadwal-table td:first-child {
+  font-family: var(--font-mono);
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  color: var(--ink-faint);
+}
+
+/* =====================================================================
+   MATA PELAJARAN
+   ===================================================================== */
+
+.jadwal-mapel {
+  font-family: var(--font-display);
+
+  font-size: 0.92rem !important;
+
+  font-weight: 600;
+
+  color: var(--navy-800) !important;
+}
+
+/* =====================================================================
+   HARI
+   ===================================================================== */
+
+.jadwal-hari {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 85px;
+
+  padding: 7px 12px;
+
+  background: var(--paper-tint);
+
+  border: 1px solid var(--paper-line);
+
+  border-radius: 8px;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  color: var(--navy-700);
+
+  text-align: center;
+}
+
+/*
+   Hari ketika hover baris.
+*/
+
+.jadwal-table tbody tr:hover .jadwal-hari {
+  background: rgba(240, 169, 62, 0.18);
+
+  border-color: rgba(240, 169, 62, 0.4);
+}
+
+/* =====================================================================
+   JAM
+   ===================================================================== */
+
+.jadwal-jam {
+  font-family: var(--font-mono);
+
+  font-size: 0.78rem !important;
+
+  font-weight: 600;
+
+  color: var(--mint-deep) !important;
+}
+
+/*
+   Membuat jam terasa seperti label informasi.
+*/
+
+.jadwal-jam::before {
+  content: "";
+
+  display: inline-block;
+
+  width: 6px;
+  height: 6px;
+
+  margin-right: 8px;
+
+  vertical-align: middle;
+
+  background: var(--mint);
+
+  border-radius: 50%;
+}
+
+/* =====================================================================
+   EMPTY STATE
+   ===================================================================== */
+
+.jadwal-empty {
+  padding: 50px 25px !important;
+
+  text-align: center !important;
+
+  font-family: var(--font-body) !important;
+
+  font-size: 0.92rem !important;
+
+  color: var(--ink-faint) !important;
+
+  background: var(--paper);
+
+  border: none !important;
+}
+
+/*
+   Empty state pada saat tidak ada data.
+*/
+
+.jadwal-table tbody tr:hover .jadwal-empty {
+  background: var(--paper);
+}
+
+/* =====================================================================
+   ERROR
+   ===================================================================== */
+
+.jadwal-error {
+  padding: 20px 22px;
+
+  background: #fff7e8;
+
+  border: 1px solid rgba(240, 169, 62, 0.35);
+
+  border-left: 4px solid var(--amber);
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.92rem;
+
+  line-height: 1.6;
+
+  color: var(--amber-ink);
+}
+
+/* =====================================================================
+   LOADING
+   ===================================================================== */
+
+.jadwal-siswa-card > .jadwal-empty {
+  min-height: 180px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--paper);
+
+  border: 1px dashed var(--paper-line) !important;
+
+  border-radius: var(--radius-sm);
+}
+
+/* =====================================================================
+   RESPONSIVE — TABLET
+   ===================================================================== */
+
+@media (max-width: 1024px) {
+  .jadwal-siswa-container {
+    padding: 35px 4% 60px;
+  }
+
+  .jadwal-siswa-card {
+    padding: 34px 30px 35px;
+  }
+
+  .jadwal-table {
+    min-width: 800px;
+  }
+}
+
+/* =====================================================================
+   RESPONSIVE — MOBILE
+   ===================================================================== */
+
+@media (max-width: 700px) {
+  .jadwal-siswa-container {
+    padding: 28px 4% 50px;
+  }
+
+  .jadwal-siswa-card {
+    padding: 30px 18px 25px;
+
+    border-radius: 14px;
+  }
+
+  .jadwal-siswa-card::before {
+    left: 20px;
+    right: 20px;
+  }
+
+  /* Header */
+
+  .jadwal-siswa-header {
+    margin-bottom: 24px;
+  }
+
+  .jadwal-siswa-title {
+    font-size: 1.65rem;
+  }
+
+  .jadwal-siswa-subtitle {
+    margin-top: 7px;
+
+    font-size: 0.82rem;
+  }
+
+  /* Table */
+
+  .jadwal-table-wrapper {
+    border-radius: 9px;
+  }
+
+  .jadwal-table {
+    min-width: 780px;
+  }
+
+  .jadwal-table th {
+    padding: 13px 14px;
+
+    font-size: 0.72rem;
+  }
+
+  .jadwal-table td {
+    padding: 15px 14px;
+
+    font-size: 0.84rem;
+  }
+
+  .jadwal-hari {
+    min-width: 78px;
+
+    padding: 6px 10px;
+
+    font-size: 0.68rem;
+  }
+
+  .jadwal-jam {
+    font-size: 0.72rem !important;
+  }
+}
+
+/* =====================================================================
+   RESPONSIVE — SMALL MOBILE
+   ===================================================================== */
+
+@media (max-width: 420px) {
+  .jadwal-siswa-container {
+    padding: 22px 3% 40px;
+  }
+
+  .jadwal-siswa-card {
+    padding: 26px 14px 20px;
+  }
+
+  .jadwal-siswa-card::before {
+    left: 16px;
+    right: 16px;
+  }
+
+  .jadwal-siswa-title {
+    font-size: 1.45rem;
+  }
+
+  .jadwal-siswa-subtitle {
+    font-size: 0.78rem;
+  }
+
+  .jadwal-table {
+    min-width: 760px;
+  }
+}
+
+/* =====================================================================
+   ACCESSIBILITY
+   ===================================================================== */
+
+.jadwal-table-wrapper:focus-visible {
+  outline: 3px solid rgba(240, 169, 62, 0.45);
+
+  outline-offset: 3px;
+}
+
+/* =====================================================================
+   REDUCED MOTION
+   ===================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .jadwal-table tbody tr {
+    transition: none;
+  }
+}

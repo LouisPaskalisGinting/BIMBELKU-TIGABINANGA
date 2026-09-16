@@ -1,0 +1,134 @@
+/* JadwalTentor.css */
+
+.jadwal-tentor-page {
+  padding: 24px;
+  background-color: #f6f8fc;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.jadwal-tentor-header {
+  margin-bottom: 22px;
+}
+
+.jadwal-tentor-header h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.jadwal-tentor-header p {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.jadwal-tentor-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.loading-box {
+  padding: 18px;
+  background-color: #f3f6ff;
+  color: #2563eb;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.jadwal-tentor-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.jadwal-tentor-table thead {
+  background-color: #2563eb;
+  color: white;
+}
+
+.jadwal-tentor-table th {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.jadwal-tentor-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 14px;
+}
+
+.jadwal-tentor-table tbody tr:hover {
+  background-color: #f3f6ff;
+}
+
+.jadwal-tentor-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.badge-hari {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.mapel {
+  color: #111827;
+  font-weight: 700;
+}
+
+.waktu {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.empty-data {
+  text-align: center;
+  padding: 28px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .jadwal-tentor-page {
+    padding: 16px;
+  }
+
+  .jadwal-tentor-header h2 {
+    font-size: 22px;
+  }
+
+  .jadwal-tentor-card {
+    padding: 16px;
+  }
+
+  .jadwal-tentor-table {
+    min-width: 650px;
+  }
+
+  .jadwal-tentor-table th,
+  .jadwal-tentor-table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+}

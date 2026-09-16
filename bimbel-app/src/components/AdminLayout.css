@@ -1,0 +1,856 @@
+/* =====================================================================
+   BIMBELKU TIGABINANGA — ADMIN LAYOUT
+   ===================================================================== */
+
+/* =====================================================================
+   ROOT VARIABLES
+   ===================================================================== */
+
+:root {
+  --admin-navy-900: #101d33;
+  --admin-navy-800: #16274a;
+  --admin-navy-700: #1f3563;
+  --admin-navy-500: #35507f;
+
+  --admin-ink: #1b2233;
+  --admin-ink-soft: #5b6478;
+  --admin-ink-faint: #8a91a3;
+
+  --admin-paper: #fbfbfd;
+  --admin-paper-tint: #eef1fa;
+  --admin-paper-line: #dfe4f2;
+
+  --admin-amber: #b77614;
+  --admin-amber-deep: #d98a1f;
+  --admin-amber-ink: #6b4508;
+
+  --admin-white: #ffffff;
+
+  --admin-danger: #d9534f;
+
+  --admin-sidebar-width: 275px;
+
+  --admin-shadow-sm: 0 2px 10px rgba(16, 29, 51, 0.06);
+
+  --admin-shadow-md: 0 12px 32px rgba(16, 29, 51, 0.1);
+}
+
+/* =====================================================================
+     RESET
+     ===================================================================== */
+
+.admin-layout {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+
+  background: var(--admin-paper);
+
+  color: var(--admin-ink);
+
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+.admin-layout *,
+.admin-layout *::before,
+.admin-layout *::after {
+  box-sizing: border-box;
+}
+
+.admin-layout button,
+.admin-layout input,
+.admin-layout select,
+.admin-layout textarea {
+  font-family: inherit;
+}
+
+/* =====================================================================
+     SIDEBAR
+     ===================================================================== */
+
+.admin-sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: var(--admin-sidebar-width);
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 25px 18px;
+
+  background: var(--admin-navy-900);
+
+  color: var(--admin-white);
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  overflow-y: auto;
+
+  z-index: 1000;
+}
+
+/* =====================================================================
+     SIDEBAR BACKGROUND
+     ===================================================================== */
+
+.admin-sidebar::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 42px,
+    rgba(255, 255, 255, 0.035) 43px
+  );
+}
+
+.admin-sidebar > * {
+  position: relative;
+
+  z-index: 1;
+}
+
+/* =====================================================================
+     LOGO
+     ===================================================================== */
+
+.sidebar-logos {
+  width: 100%;
+
+  min-height: 76px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 8px 14px;
+
+  margin-bottom: 22px;
+
+  color: var(--admin-white);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sidebar-logos span {
+  display: block;
+
+  font-family: "Space Grotesk", "Inter", "Segoe UI", sans-serif;
+
+  font-size: 1.02rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  line-height: 1.2;
+}
+
+.sidebar-logos small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #9eabc2;
+
+  font-family: "Inter", "Segoe UI", sans-serif;
+
+  font-size: 0.68rem;
+
+  font-weight: 500;
+
+  letter-spacing: 1.5px;
+
+  line-height: 1.2;
+}
+
+/* =====================================================================
+     NAVIGATION
+     ===================================================================== */
+
+.admin-navigation {
+  width: 100%;
+}
+
+.admin-navigation ul {
+  width: 100%;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+/* =====================================================================
+     MENU ITEM
+     ===================================================================== */
+
+.admin-navigation li {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 43px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 10px 14px;
+
+  color: #b9c4d9;
+
+  background: transparent;
+
+  border: 1px solid transparent;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  font-family: "Inter", "Segoe UI", sans-serif;
+
+  font-size: 0.84rem;
+
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* =====================================================================
+     MENU DOT
+     ===================================================================== */
+
+.menu-dot {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  margin-right: 12px;
+
+  background: #687895;
+
+  border-radius: 50%;
+
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* =====================================================================
+     MENU LABEL
+     ===================================================================== */
+
+.menu-label {
+  display: block;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+/* =====================================================================
+     HOVER
+     ===================================================================== */
+
+.admin-navigation li:hover {
+  background: rgba(255, 255, 255, 0.07);
+
+  color: var(--admin-white);
+
+  border-color: rgba(255, 255, 255, 0.06);
+
+  transform: translateX(3px);
+}
+
+.admin-navigation li:hover .menu-dot {
+  background: var(--admin-amber);
+
+  transform: scale(1.3);
+}
+
+/* =====================================================================
+     ACTIVE MENU
+     ===================================================================== */
+
+.admin-navigation li.active {
+  background: rgba(255, 255, 255, 0.12);
+
+  color: var(--admin-white);
+
+  border-color: rgba(255, 255, 255, 0.12);
+
+  font-weight: 700;
+
+  transform: translateX(3px);
+
+  box-shadow: inset 3px 0 0 var(--admin-amber), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.admin-navigation li.active .menu-dot {
+  background: var(--admin-amber);
+
+  transform: scale(1.4);
+
+  box-shadow: 0 0 8px rgba(183, 118, 20, 0.6);
+}
+
+.admin-navigation li.active:hover {
+  background: rgba(255, 255, 255, 0.15);
+
+  color: var(--admin-white);
+
+  transform: translateX(3px);
+}
+
+/* =====================================================================
+     LOGOUT
+     ===================================================================== */
+
+.admin-navigation li.logout-menu {
+  margin-top: 18px;
+
+  padding-top: 18px;
+
+  color: #aeb9cf;
+
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+
+  border-radius: 0;
+}
+
+.admin-navigation li.logout-menu .menu-dot {
+  background: var(--admin-danger);
+}
+
+.admin-navigation li.logout-menu:hover {
+  background: rgba(217, 83, 79, 0.1);
+
+  color: #ffaaa6;
+
+  border-color: transparent;
+
+  transform: translateX(3px);
+}
+
+.admin-navigation li.logout-menu:hover .menu-dot {
+  background: var(--admin-danger);
+
+  transform: scale(1.3);
+}
+
+/* =====================================================================
+     MAIN CONTENT
+     ===================================================================== */
+
+.admin-main {
+  position: relative;
+
+  width: calc(100% - var(--admin-sidebar-width));
+
+  min-height: 100vh;
+
+  margin-left: var(--admin-sidebar-width);
+
+  padding: 38px 42px;
+
+  background: var(--admin-paper);
+
+  overflow-x: hidden;
+
+  isolation: isolate;
+}
+
+/* =====================================================================
+     NOTEBOOK BACKGROUND
+     ===================================================================== */
+
+.admin-main::before {
+  content: "";
+
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  left: var(--admin-sidebar-width);
+
+  pointer-events: none;
+
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 43px,
+    rgba(216, 90, 6, 0.08) 44px
+  );
+
+  z-index: -1;
+}
+
+/* =====================================================================
+     GLOBAL TYPOGRAPHY
+     ===================================================================== */
+
+.admin-main > h1 {
+  margin-top: 0;
+
+  color: var(--admin-navy-900);
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+/* =====================================================================
+     BUTTON
+     ===================================================================== */
+
+.admin-main button {
+  font-family: inherit;
+}
+
+/* =====================================================================
+     TABLE
+     ===================================================================== */
+
+.admin-main table {
+  width: 100%;
+
+  border-collapse: separate;
+
+  border-spacing: 0;
+
+  background: var(--admin-white);
+
+  border: 1px solid var(--admin-paper-line);
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: var(--admin-shadow-sm);
+}
+
+.admin-main th {
+  padding: 14px 16px;
+
+  background: var(--admin-paper-tint);
+
+  color: var(--admin-navy-800);
+
+  border-bottom: 1px solid var(--admin-paper-line);
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 0.76rem;
+
+  font-weight: 700;
+
+  text-align: left;
+}
+
+.admin-main td {
+  padding: 13px 16px;
+
+  color: var(--admin-ink-soft);
+
+  border-bottom: 1px solid var(--admin-paper-line);
+
+  font-size: 0.84rem;
+}
+
+.admin-main tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-main tbody tr {
+  transition: background 0.15s ease;
+}
+
+.admin-main tbody tr:hover {
+  background: #fafbff;
+}
+
+/* =====================================================================
+     STATUS BADGE
+     ===================================================================== */
+
+.admin-main .badge,
+.admin-main .status {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.65rem;
+
+  font-weight: 600;
+}
+
+.admin-main .badge-success,
+.admin-main .status-success {
+  background: rgba(44, 156, 115, 0.12);
+
+  color: #1f7d5c;
+}
+
+.admin-main .badge-warning,
+.admin-main .status-warning {
+  background: rgba(240, 169, 62, 0.16);
+
+  color: var(--admin-amber-ink);
+}
+
+.admin-main .badge-danger,
+.admin-main .status-danger {
+  background: rgba(217, 83, 79, 0.12);
+
+  color: #a53b38;
+}
+
+/* =====================================================================
+     SCROLLBAR SIDEBAR
+     ===================================================================== */
+
+.admin-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.admin-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb {
+  background: var(--admin-navy-500);
+
+  border-radius: 10px;
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--admin-amber);
+}
+
+/* =====================================================================
+     ACCESSIBILITY
+     ===================================================================== */
+
+.admin-navigation li:focus-visible,
+.admin-main button:focus-visible,
+.admin-main input:focus-visible,
+.admin-main select:focus-visible,
+.admin-main textarea:focus-visible {
+  outline: 3px solid var(--admin-amber);
+
+  outline-offset: 2px;
+}
+
+/* =====================================================================
+     TABLET
+     ===================================================================== */
+
+@media (max-width: 1100px) {
+  :root {
+    --admin-sidebar-width: 235px;
+  }
+
+  .admin-sidebar {
+    padding: 22px 14px;
+  }
+
+  .sidebar-logos {
+    min-height: 68px;
+
+    margin-bottom: 18px;
+
+    padding: 6px 11px;
+  }
+
+  .sidebar-logos span {
+    font-size: 0.9rem;
+  }
+
+  .sidebar-logos small {
+    font-size: 0.62rem;
+  }
+
+  .admin-navigation li {
+    min-height: 41px;
+
+    padding: 9px 11px;
+
+    font-size: 0.78rem;
+  }
+
+  .admin-main {
+    padding: 30px;
+  }
+
+  .admin-main::before {
+    left: var(--admin-sidebar-width);
+  }
+}
+
+/* =====================================================================
+     MOBILE
+     ===================================================================== */
+
+@media (max-width: 768px) {
+  .admin-layout {
+    display: block;
+  }
+
+  .admin-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 68px;
+    min-height: 68px;
+
+    padding: 10px 15px;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    overflow: hidden;
+  }
+
+  /* ===============================================================
+       MOBILE LOGO
+       =============================================================== */
+
+  .sidebar-logos {
+    width: auto;
+
+    min-width: max-content;
+
+    height: 46px;
+    min-height: 46px;
+
+    margin: 0;
+
+    padding: 5px 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    border-bottom: none;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .sidebar-logos span {
+    font-size: 0.76rem;
+
+    letter-spacing: 0.5px;
+  }
+
+  .sidebar-logos small {
+    margin-top: 2px;
+
+    font-size: 0.5rem;
+
+    letter-spacing: 1px;
+  }
+
+  /* ===============================================================
+       MOBILE NAVIGATION
+       =============================================================== */
+
+  .admin-navigation {
+    flex: 1;
+
+    min-width: 0;
+
+    margin-left: 12px;
+
+    overflow: hidden;
+  }
+
+  .admin-navigation ul {
+    width: max-content;
+
+    flex-direction: row;
+
+    gap: 6px;
+
+    overflow-x: auto;
+
+    padding-bottom: 2px;
+  }
+
+  .admin-navigation li {
+    width: auto;
+
+    min-width: max-content;
+
+    min-height: 40px;
+
+    padding: 9px 12px;
+
+    font-size: 0.75rem;
+
+    white-space: nowrap;
+
+    transform: none;
+  }
+
+  .admin-navigation li:hover {
+    transform: none;
+  }
+
+  .admin-navigation li.active {
+    transform: none;
+
+    box-shadow: inset 0 -3px 0 var(--admin-amber);
+  }
+
+  .admin-navigation li.active:hover {
+    transform: none;
+  }
+
+  .admin-navigation li.logout-menu {
+    margin-top: 0;
+
+    padding-top: 9px;
+
+    border-top: none;
+  }
+
+  .menu-dot {
+    display: none;
+  }
+
+  /* ===============================================================
+       MOBILE MAIN
+       =============================================================== */
+
+  .admin-main {
+    width: 100%;
+
+    margin-left: 0;
+
+    padding: 95px 20px 30px;
+  }
+
+  .admin-main::before {
+    left: 0;
+  }
+}
+
+/* =====================================================================
+     SMALL MOBILE
+     ===================================================================== */
+
+@media (max-width: 480px) {
+  .admin-sidebar {
+    height: 62px;
+
+    min-height: 62px;
+
+    padding: 9px 12px;
+  }
+
+  .sidebar-logos {
+    height: 40px;
+
+    min-height: 40px;
+
+    padding: 4px 9px;
+  }
+
+  .sidebar-logos span {
+    font-size: 0.68rem;
+  }
+
+  .sidebar-logos small {
+    font-size: 0.43rem;
+  }
+
+  .admin-navigation {
+    margin-left: 8px;
+  }
+
+  .admin-navigation ul {
+    gap: 5px;
+  }
+
+  .admin-navigation li {
+    min-height: 36px;
+
+    padding: 8px 10px;
+
+    font-size: 0.68rem;
+  }
+
+  .admin-main {
+    padding: 84px 14px 25px;
+  }
+
+  .admin-main table {
+    display: block;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+  }
+}
+
+/* =====================================================================
+     REDUCED MOTION
+     ===================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .admin-navigation li,
+  .admin-main button,
+  .admin-main .card,
+  .admin-main .content-card,
+  .admin-main .dashboard-card,
+  .admin-main .stat-card {
+    transition: none;
+  }
+}

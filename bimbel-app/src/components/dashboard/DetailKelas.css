@@ -1,0 +1,813 @@
+/* ============================================================
+   DETAIL KELAS
+   BIMBELKU TIGABINANGA
+   Theme: Notebook / Learning Dashboard
+   ============================================================ */
+
+/* ============================================================
+   FONT
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap");
+
+/* ============================================================
+     RESET
+     ============================================================ */
+
+.detail-kelas-container,
+.detail-kelas-container * {
+  box-sizing: border-box;
+}
+
+/* ============================================================
+     MAIN CONTAINER
+     ============================================================ */
+
+.detail-kelas-container {
+  --navy-900: #101d33;
+  --navy-800: #16274a;
+  --navy-700: #1f3563;
+  --navy-500: #35507f;
+
+  --ink: #1b2233;
+  --ink-soft: #5b6478;
+  --ink-faint: #8a91a3;
+
+  --paper: #fbfbfd;
+  --paper-tint: #eef1fa;
+  --paper-line: #dfe4f2;
+
+  --amber: #f0a93e;
+  --amber-deep: #d98a1f;
+  --amber-ink: #6b4508;
+
+  --mint: #2c9c73;
+  --mint-deep: #1f7d5c;
+
+  --danger: #c84b4b;
+  --danger-bg: #fff2f2;
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 40px 32px 70px;
+
+  background: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 43px,
+      rgba(31, 53, 99, 0.035) 44px
+    ),
+    var(--paper);
+
+  color: var(--ink);
+
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+
+  overflow-x: hidden;
+}
+
+/* ============================================================
+     PAGE TITLE
+     ============================================================ */
+
+.detail-kelas-container > h1 {
+  position: relative;
+
+  margin: 0 0 28px;
+
+  display: inline-block;
+
+  color: var(--navy-900);
+
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.5px;
+}
+
+/* efek stabilo amber */
+
+.detail-kelas-container > h1::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 8px;
+  bottom: 1px;
+
+  height: 9px;
+
+  background: rgba(240, 169, 62, 0.4);
+
+  z-index: 0;
+}
+
+/* pastikan tulisan di atas stabilo */
+
+.detail-kelas-container > h1 {
+  isolation: isolate;
+}
+
+.detail-kelas-container > h1::after {
+  z-index: -1;
+}
+
+/* ============================================================
+     TOP ROW
+     ============================================================ */
+
+.kelas-top-row {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(350px, 0.9fr);
+
+  gap: 22px;
+
+  align-items: stretch;
+
+  margin-bottom: 24px;
+}
+
+/* ============================================================
+     DETAIL KELAS CARD
+     ============================================================ */
+
+.detail-kelas-card {
+  position: relative;
+
+  min-height: 180px;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--paper-line);
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 28px rgba(16, 29, 51, 0.07);
+
+  overflow: hidden;
+}
+
+/* aksen atas */
+
+.detail-kelas-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 28px;
+
+  width: 90px;
+  height: 4px;
+
+  background: var(--amber);
+
+  border-radius: 0 0 4px 4px;
+}
+
+/* garis notebook */
+
+.detail-kelas-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 34px;
+
+  height: 1px;
+
+  background: rgba(223, 228, 242, 0.55);
+}
+
+/* ============================================================
+     KELAS TITLE
+     ============================================================ */
+
+.detail-kelas-card h3 {
+  position: relative;
+
+  margin: 20px 0 15px;
+
+  color: var(--navy-900);
+
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+/* ============================================================
+     PROGRAM
+     ============================================================ */
+
+.detail-kelas-card p {
+  margin: 0;
+
+  color: var(--ink-soft);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.detail-kelas-card p::first-line {
+  color: var(--navy-700);
+}
+
+/* ============================================================
+     TAMBAH SISWA CARD
+     ============================================================ */
+
+.tambah-siswa-card {
+  position: relative;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--paper-line);
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 28px rgba(16, 29, 51, 0.07);
+
+  overflow: visible;
+
+  z-index: 5;
+}
+
+/* aksen amber */
+
+.tambah-siswa-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 28px;
+
+  width: 70px;
+  height: 4px;
+
+  background: var(--amber);
+
+  border-radius: 0 0 4px 4px;
+}
+
+/* ============================================================
+     TAMBAH SISWA TITLE
+     ============================================================ */
+
+.tambah-siswa-card h2 {
+  margin: 2px 0 18px;
+
+  color: var(--navy-900);
+
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+/* ============================================================
+     SEARCH BOX
+     ============================================================ */
+
+.search-box {
+  position: relative;
+
+  width: 100%;
+}
+
+/* ============================================================
+     SEARCH INPUT
+     ============================================================ */
+
+.search-box input {
+  width: 100%;
+
+  height: 46px;
+
+  padding: 0 15px;
+
+  border: 1px solid var(--paper-line);
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #fbfbfd;
+
+  color: var(--ink);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 13px;
+
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-box input::placeholder {
+  color: var(--ink-faint);
+}
+
+.search-box input:focus {
+  background: #ffffff;
+
+  border-color: var(--navy-500);
+
+  box-shadow: 0 0 0 3px rgba(53, 80, 127, 0.1);
+}
+
+/* ============================================================
+     SEARCH RESULT
+     ============================================================ */
+
+.search-result {
+  position: absolute;
+
+  top: calc(100% + 8px);
+
+  left: 0;
+  right: 0;
+
+  max-height: 260px;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border: 1px solid var(--paper-line);
+
+  border-radius: 13px;
+
+  box-shadow: 0 16px 35px rgba(16, 29, 51, 0.14);
+
+  z-index: 100;
+}
+
+/* ============================================================
+     SEARCH ITEM
+     ============================================================ */
+
+.search-item {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  padding: 13px 15px;
+
+  border-bottom: 1px solid #edf0f6;
+
+  cursor: pointer;
+
+  transition: background 0.18s ease, padding-left 0.18s ease;
+}
+
+.search-item:last-child {
+  border-bottom: none;
+}
+
+.search-item:hover {
+  background: var(--paper-tint);
+
+  padding-left: 19px;
+}
+
+/* ============================================================
+     SEARCH NAME
+     ============================================================ */
+
+.search-item strong {
+  color: var(--navy-900);
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/* ============================================================
+     SEARCH DETAIL
+     ============================================================ */
+
+.search-item span {
+  color: var(--ink-soft);
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+/* ============================================================
+     TABLE CARD
+     ============================================================ */
+
+.siswa-table-card {
+  position: relative;
+
+  width: 100%;
+
+  padding: 26px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--paper-line);
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 28px rgba(16, 29, 51, 0.07);
+
+  overflow: hidden;
+}
+
+/* aksen */
+
+.siswa-table-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 28px;
+
+  width: 80px;
+  height: 4px;
+
+  background: var(--amber);
+
+  border-radius: 0 0 4px 4px;
+}
+
+/* ============================================================
+     TABLE CARD TITLE
+     ============================================================ */
+
+.siswa-table-card h2 {
+  margin: 3px 0 22px;
+
+  color: var(--navy-900);
+
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+
+  font-size: 21px;
+
+  font-weight: 700;
+}
+
+/* ============================================================
+     TABLE WRAPPER
+     ============================================================ */
+
+.siswa-table-card {
+  overflow-x: auto;
+}
+
+/* ============================================================
+     TABLE
+     ============================================================ */
+
+.siswa-table {
+  width: 100%;
+
+  border-collapse: separate;
+
+  border-spacing: 0;
+
+  min-width: 720px;
+
+  overflow: hidden;
+}
+
+/* ============================================================
+     TABLE HEAD
+     ============================================================ */
+
+.siswa-table thead th {
+  padding: 13px 14px;
+
+  background: var(--navy-800);
+
+  color: #ffffff;
+
+  border: none;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+
+  text-align: left;
+
+  white-space: nowrap;
+}
+
+.siswa-table thead th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.siswa-table thead th:last-child {
+  border-radius: 0 10px 10px 0;
+
+  text-align: center;
+}
+
+/* ============================================================
+     TABLE BODY
+     ============================================================ */
+
+.siswa-table tbody tr {
+  transition: background 0.18s ease;
+}
+
+.siswa-table tbody tr:hover {
+  background: var(--paper-tint);
+}
+
+/* ============================================================
+     TABLE CELL
+     ============================================================ */
+
+.siswa-table tbody td {
+  padding: 15px 14px;
+
+  border-bottom: 1px solid #e7eaf1;
+
+  color: var(--ink-soft);
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  vertical-align: middle;
+}
+
+/* nama */
+
+.siswa-table tbody td:first-child {
+  color: var(--navy-900);
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/* aksi */
+
+.siswa-table tbody td:last-child {
+  text-align: center;
+}
+
+/* ============================================================
+     DELETE BUTTON
+     ============================================================ */
+/* ============================================================
+   TOMBOL DETAIL
+   ============================================================ */
+
+.btn-detail {
+  width: 100%;
+  height: 44px;
+
+  padding: 0 18px;
+
+  border: 1px solid #16274a;
+  border-radius: 11px;
+
+  background: #16274a;
+  color: #ffffff;
+
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-detail:hover {
+  background: #1f3563;
+  border-color: #1f3563;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 16px rgba(16, 29, 51, 0.18);
+}
+
+.btn-detail:active {
+  transform: translateY(0);
+}
+
+.btn-delete {
+  padding: 8px 12px;
+
+  border: 1px solid rgba(200, 75, 75, 0.25);
+
+  border-radius: 8px;
+
+  background: var(--danger-bg);
+
+  color: var(--danger);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-delete:hover {
+  background: var(--danger);
+
+  border-color: var(--danger);
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+/* ============================================================
+     EMPTY DATA
+     ============================================================ */
+
+.empty-data {
+  padding: 45px 20px !important;
+
+  text-align: center !important;
+
+  color: var(--ink-faint) !important;
+
+  font-size: 12px !important;
+
+  background: #fbfbfd;
+}
+
+.empty-data::before {
+  content: "✎";
+
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--amber);
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 26px;
+}
+
+/* ============================================================
+     SCROLLBAR
+     ============================================================ */
+
+.search-result::-webkit-scrollbar,
+.siswa-table-card::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.search-result::-webkit-scrollbar-track,
+.siswa-table-card::-webkit-scrollbar-track {
+  background: #f1f3f8;
+}
+
+.search-result::-webkit-scrollbar-thumb,
+.siswa-table-card::-webkit-scrollbar-thumb {
+  background: #cbd2e2;
+
+  border-radius: 999px;
+}
+
+.search-result::-webkit-scrollbar-thumb:hover,
+.siswa-table-card::-webkit-scrollbar-thumb:hover {
+  background: var(--navy-500);
+}
+
+/* ============================================================
+     RESPONSIVE — 1050px
+     ============================================================ */
+
+@media (max-width: 1050px) {
+  .kelas-top-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+     RESPONSIVE — 768px
+     ============================================================ */
+
+@media (max-width: 768px) {
+  .detail-kelas-container {
+    padding: 25px 20px 50px;
+  }
+
+  .detail-kelas-container > h1 {
+    font-size: 29px;
+
+    margin-bottom: 23px;
+  }
+
+  .detail-kelas-card,
+  .tambah-siswa-card,
+  .siswa-table-card {
+    padding: 22px;
+  }
+
+  .detail-kelas-card::before,
+  .tambah-siswa-card::before,
+  .siswa-table-card::before {
+    left: 22px;
+  }
+}
+
+/* ============================================================
+     RESPONSIVE — 550px
+     ============================================================ */
+
+@media (max-width: 550px) {
+  .detail-kelas-container {
+    padding: 20px 14px 40px;
+  }
+
+  .detail-kelas-container > h1 {
+    font-size: 26px;
+  }
+
+  .detail-kelas-card,
+  .tambah-siswa-card,
+  .siswa-table-card {
+    padding: 18px;
+  }
+
+  .detail-kelas-card::before,
+  .tambah-siswa-card::before,
+  .siswa-table-card::before {
+    left: 18px;
+  }
+
+  .detail-kelas-card h3 {
+    margin-top: 17px;
+
+    font-size: 21px;
+  }
+
+  .tambah-siswa-card h2,
+  .siswa-table-card h2 {
+    font-size: 18px;
+  }
+
+  .notification-item {
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+}
+
+/* ============================================================
+     REDUCED MOTION
+     ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .detail-kelas-container *,
+  .detail-kelas-container *::before,
+  .detail-kelas-container *::after {
+    transition-duration: 0.001ms !important;
+
+    animation-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,494 @@
+/* =========================================================
+   ABSENSI TENTOR - PROFESSIONAL UI
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+     HALAMAN UTAMA
+     ========================================================= */
+
+.absensi-page {
+  width: 100%;
+  min-height: calc(100vh - 72px);
+  padding: 32px;
+  background: #f5f7fb;
+  color: #172554;
+}
+
+/* =========================================================
+     HEADER
+     ========================================================= */
+
+.absensi-page > h1 {
+  margin: 0 0 24px;
+  font-size: 30px;
+  font-weight: 750;
+  color: #0f172a;
+  letter-spacing: -0.4px;
+}
+
+.absensi-page > h1::after {
+  content: "Kelola kehadiran siswa berdasarkan jadwal mengajar";
+  display: block;
+  margin-top: 7px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #64748b;
+  letter-spacing: 0;
+}
+
+/* =========================================================
+     FILTER CARD
+     ========================================================= */
+
+.filter-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+.filter-card h2 {
+  margin: 0 0 18px;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* =========================================================
+     FILTER
+     ========================================================= */
+
+.filter-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.filter-wrapper input {
+  width: 100%;
+  height: 46px;
+  padding: 0 15px;
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.filter-wrapper input::placeholder {
+  color: #94a3b8;
+}
+
+.filter-wrapper input:focus {
+  background: #ffffff;
+  border-color: #f4a62a;
+  box-shadow: 0 0 0 3px rgba(244, 166, 42, 0.13);
+}
+
+/* =========================================================
+     TABLE CARD
+     ========================================================= */
+
+.absensi-table-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================================================
+     TABLE
+     ========================================================= */
+
+.absensi-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+/* Header */
+
+.absensi-table thead {
+  background: #172b55;
+}
+
+.absensi-table thead th {
+  padding: 17px 18px;
+  text-align: left;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  white-space: nowrap;
+}
+
+.absensi-table thead th:first-child {
+  width: 22%;
+}
+
+.absensi-table thead th:nth-child(2) {
+  width: 22%;
+}
+
+.absensi-table thead th:nth-child(3) {
+  width: 17%;
+}
+
+.absensi-table thead th:nth-child(4) {
+  width: 17%;
+}
+
+.absensi-table thead th:last-child {
+  width: 22%;
+  text-align: center;
+}
+
+/* Body */
+
+.absensi-table tbody tr {
+  background: #ffffff;
+  transition: background 0.2s ease;
+}
+
+.absensi-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.absensi-table tbody td {
+  padding: 18px;
+  border-bottom: 1px solid #e8edf3;
+  color: #334155;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.absensi-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.absensi-table tbody td:last-child {
+  text-align: center;
+}
+
+/* =========================================================
+     TOMBOL ISI ABSENSI
+     ========================================================= */
+
+.btn-absensi {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 125px;
+  height: 40px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 9px;
+  background: #172b55;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-absensi:hover {
+  background: #243e73;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(23, 43, 85, 0.2);
+}
+
+.btn-absensi:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+     DATA KOSONG
+     ========================================================= */
+
+.empty-data {
+  padding: 45px 20px !important;
+  text-align: center !important;
+  color: #94a3b8 !important;
+  font-size: 14px !important;
+}
+
+/* =========================================================
+     FORM ABSENSI
+     ========================================================= */
+
+.form-absensi-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+     HEADER FORM ABSENSI
+     ========================================================= */
+
+.form-absensi-wrapper > div {
+  width: 100%;
+}
+
+/* =========================================================
+     CARD INFORMASI JADWAL
+     ========================================================= */
+
+.form-absensi-wrapper .jadwal-info,
+.form-absensi-wrapper .info-jadwal,
+.form-absensi-wrapper .detail-jadwal {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================================================
+     TABLE ABSENSI DI DALAM FORM
+     ========================================================= */
+
+.form-absensi-wrapper table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+/* Header table */
+
+.form-absensi-wrapper table thead {
+  background: #172b55;
+}
+
+.form-absensi-wrapper table thead th {
+  padding: 16px 18px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  border: none;
+}
+
+/* Body */
+
+.form-absensi-wrapper table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.form-absensi-wrapper table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.form-absensi-wrapper table tbody td {
+  padding: 16px 18px;
+  color: #334155;
+  font-size: 14px;
+  border-bottom: 1px solid #e8edf3;
+}
+
+.form-absensi-wrapper table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================================
+     SELECT STATUS ABSENSI
+     ========================================================= */
+
+.form-absensi-wrapper select {
+  width: 100%;
+  min-width: 150px;
+  height: 42px;
+  padding: 0 38px 0 13px;
+  border: 1px solid #d5dde8;
+  border-radius: 9px;
+  background-color: #ffffff;
+  color: #172b55;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  appearance: auto;
+  transition: all 0.2s ease;
+}
+
+.form-absensi-wrapper select:hover {
+  border-color: #f4a62a;
+}
+
+.form-absensi-wrapper select:focus {
+  border-color: #f4a62a;
+  box-shadow: 0 0 0 3px rgba(244, 166, 42, 0.13);
+}
+
+/* =========================================================
+     TOMBOL SIMPAN
+     ========================================================= */
+
+.form-absensi-wrapper button {
+  min-height: 42px;
+  padding: 0 20px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Tombol simpan */
+
+.form-absensi-wrapper button[type="submit"] {
+  background: #172b55;
+  color: #ffffff;
+  border: none;
+}
+
+.form-absensi-wrapper button[type="submit"]:hover {
+  background: #243e73;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(23, 43, 85, 0.2);
+}
+
+/* =========================================================
+     TOMBOL KEMBALI
+     ========================================================= */
+
+.form-absensi-wrapper button:not([type="submit"]) {
+  background: #ffffff;
+  color: #172b55;
+  border: 1px solid #dbe2ea;
+}
+
+.form-absensi-wrapper button:not([type="submit"]):hover {
+  background: #f8fafc;
+  border-color: #172b55;
+}
+
+/* =========================================================
+     AREA AKSI FORM
+     ========================================================= */
+
+.form-absensi-wrapper form {
+  width: 100%;
+}
+
+.form-absensi-wrapper form > div:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+/* =========================================================
+     RESPONSIVE TABLE
+     ========================================================= */
+
+@media (max-width: 1100px) {
+  .absensi-page {
+    padding: 24px;
+  }
+
+  .filter-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .absensi-table {
+    min-width: 800px;
+  }
+
+  .absensi-table-card {
+    overflow-x: auto;
+  }
+
+  .form-absensi-wrapper {
+    overflow-x: auto;
+  }
+
+  .form-absensi-wrapper table {
+    min-width: 700px;
+  }
+}
+
+/* =========================================================
+     TABLET
+     ========================================================= */
+
+@media (max-width: 768px) {
+  .absensi-page {
+    padding: 18px;
+  }
+
+  .absensi-page > h1 {
+    font-size: 24px;
+  }
+
+  .filter-card {
+    padding: 18px;
+  }
+
+  .filter-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .absensi-table-card {
+    border-radius: 14px;
+  }
+
+  .absensi-table {
+    min-width: 720px;
+  }
+
+  .form-absensi-wrapper table {
+    min-width: 650px;
+  }
+}
+
+/* =========================================================
+     MOBILE
+     ========================================================= */
+
+@media (max-width: 480px) {
+  .absensi-page {
+    padding: 14px;
+  }
+
+  .absensi-page > h1 {
+    font-size: 21px;
+  }
+
+  .filter-card {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .filter-card h2 {
+    font-size: 16px;
+  }
+
+  .btn-absensi {
+    min-width: 110px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .form-absensi-wrapper {
+    width: 100%;
+  }
+}

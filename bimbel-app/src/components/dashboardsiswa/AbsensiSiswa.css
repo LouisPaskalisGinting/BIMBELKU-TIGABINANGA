@@ -1,0 +1,306 @@
+/* =====================================================================
+   ABSENSI SISWA — mengikuti bahasa visual LandingPage
+   Konsep: kartu absensi dibaca seperti "buku presensi kelas" —
+   status hadir/izin/sakit/alfa ditandai seperti stempel guru.
+   ===================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap");
+
+:root {
+  --navy-900: #101d33;
+  --navy-800: #16274a;
+  --navy-700: #1f3563;
+  --ink: #1b2233;
+  --ink-soft: #5b6478;
+  --ink-faint: #8a91a3;
+
+  --paper: #fbfbfd;
+  --paper-tint: #eef1fa;
+  --paper-line: #dfe4f2;
+
+  --amber: #f0a93e;
+  --amber-deep: #d98a1f;
+  --amber-ink: #6b4508;
+  --amber-bg: #fdf1de;
+
+  --mint: #2c9c73;
+  --mint-deep: #1f7d5c;
+  --mint-bg: #e4f5ee;
+
+  --sky: #2f6fa8;
+  --sky-bg: #e6eff8;
+
+  --red: #c94a4a;
+  --red-bg: #fbe9e9;
+
+  --white: #ffffff;
+  --shadow-sm: 0 2px 10px rgba(16, 29, 51, 0.06);
+  --shadow-md: 0 12px 32px rgba(16, 29, 51, 0.1);
+  --shadow-lg: 0 24px 60px rgba(16, 29, 51, 0.16);
+
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+}
+
+/* =====================================================================
+      PAGE WRAPPER
+      ===================================================================== */
+
+.absensi-siswa-container {
+  min-height: 100vh;
+  background: var(--paper-tint);
+  font-family: var(--font-body);
+  color: var(--ink);
+  padding: 56px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.absensi-siswa-card {
+  width: 100%;
+  max-width: 880px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--paper-line);
+  box-shadow: var(--shadow-lg);
+  padding: 40px 36px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Garis perforasi amber di atas kartu, konsisten dengan footer landing page */
+.absensi-siswa-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--amber) 0,
+    var(--amber) 14px,
+    var(--navy-900) 14px,
+    var(--navy-900) 28px
+  );
+}
+
+.absensi-siswa-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  font-weight: 700;
+  color: var(--navy-900);
+  margin: 6px 0 30px;
+  display: inline-block;
+  /* Efek stabilo, senada dengan judul di landing page */
+  background-image: linear-gradient(
+    transparent 64%,
+    rgba(240, 169, 62, 0.5) 64%
+  );
+}
+
+/* =====================================================================
+      LOADING STATE
+      ===================================================================== */
+
+.absensi-loading {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--ink-faint);
+  padding: 46px 0;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.absensi-loading::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 10px;
+  border: 2px solid var(--paper-line);
+  border-top-color: var(--amber-deep);
+  border-radius: 50%;
+  vertical-align: -2px;
+  animation: absensi-spin 0.8s linear infinite;
+}
+
+@keyframes absensi-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================================================================
+      TABEL ABSENSI
+      ===================================================================== */
+
+.absensi-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-md);
+}
+
+.absensi-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+}
+
+.absensi-table thead th {
+  background: var(--navy-900);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 16px 20px;
+}
+
+.absensi-table thead th:first-child {
+  border-radius: var(--radius-md) 0 0 0;
+}
+
+.absensi-table thead th:last-child {
+  border-radius: 0 var(--radius-md) 0 0;
+}
+
+.absensi-table tbody tr {
+  border-bottom: 1px solid var(--paper-line);
+  transition: background 0.15s ease;
+}
+
+.absensi-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.absensi-table tbody tr:nth-child(even) {
+  background: var(--paper-tint);
+}
+
+.absensi-table tbody tr:hover {
+  background: var(--amber-bg);
+}
+
+.absensi-table td {
+  padding: 15px 20px;
+  font-size: 0.94rem;
+  color: var(--ink);
+  vertical-align: middle;
+}
+
+.absensi-table td:first-child {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+/* ---------- Label status ala stempel guru ---------- */
+
+.status-hadir,
+.status-izin,
+.status-sakit,
+.status-alfa {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.status-hadir::before,
+.status-izin::before,
+.status-sakit::before,
+.status-alfa::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.status-hadir {
+  background: var(--mint-bg);
+  color: var(--mint-deep);
+}
+.status-hadir::before {
+  background: var(--mint);
+}
+
+.status-izin {
+  background: var(--amber-bg);
+  color: var(--amber-ink);
+}
+.status-izin::before {
+  background: var(--amber-deep);
+}
+
+.status-sakit {
+  background: var(--sky-bg);
+  color: var(--sky);
+}
+.status-sakit::before {
+  background: var(--sky);
+}
+
+.status-alfa {
+  background: var(--red-bg);
+  color: var(--red);
+}
+.status-alfa::before {
+  background: var(--red);
+}
+
+/* ---------- Baris kosong ---------- */
+
+.absensi-empty {
+  text-align: center;
+  padding: 48px 20px !important;
+  color: var(--ink-faint);
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+}
+
+/* =====================================================================
+      RESPONSIVE
+      ===================================================================== */
+
+@media (max-width: 640px) {
+  .absensi-siswa-container {
+    padding: 32px 4%;
+  }
+
+  .absensi-siswa-card {
+    padding: 28px 18px 22px;
+  }
+
+  .absensi-table td,
+  .absensi-table thead th {
+    padding: 12px 14px;
+  }
+}
+
+/* =====================================================================
+      AKSESIBILITAS
+      ===================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .absensi-loading::after {
+    animation: none;
+  }
+
+  .absensi-table tbody tr {
+    transition: none;
+  }
+}

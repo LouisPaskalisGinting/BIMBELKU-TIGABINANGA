@@ -1,0 +1,90 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.testimonial-modal {
+  width: 650px;
+  max-width: 95%;
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.testimonial-modal h2 {
+  margin-bottom: 20px;
+}
+
+.testimonial-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.testimonial-modal input,
+.testimonial-modal textarea {
+  padding: 10px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+}
+
+.preview-image {
+  width: 180px;
+
+  height: 180px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  border: 1px solid #ddd;
+}
+
+.modal-buttons {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.btn-save {
+  background: #2e7d32;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 25px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background: #d32f2f;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 25px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}

@@ -1,0 +1,531 @@
+* {
+  box-sizing: border-box;
+}
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  padding: 30px;
+
+  background: radial-gradient(
+      circle at 15% 20%,
+      rgba(240, 169, 62, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(240, 169, 62, 0.08),
+      transparent 28%
+    ),
+    #f7f8fb;
+
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+     DECORATIVE BACKGROUND
+     ========================================================= */
+
+.login-page::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  left: -250px;
+  top: -260px;
+
+  background: #101d33;
+
+  border-radius: 50%;
+
+  opacity: 0.97;
+}
+
+.login-page::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -210px;
+  bottom: -210px;
+
+  background: #f0a93e;
+
+  border-radius: 50%;
+
+  opacity: 0.14;
+}
+
+/* =========================================================
+     LOGIN BOX
+     ========================================================= */
+
+.login-box {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+  max-width: 430px;
+
+  padding: 42px 42px 38px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe4f0;
+
+  border-radius: 20px;
+
+  box-shadow: 0 25px 70px rgba(16, 29, 51, 0.12),
+    0 5px 20px rgba(16, 29, 51, 0.05);
+
+  animation: loginAppear 0.45s ease;
+}
+
+@keyframes loginAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+     TOP BRAND
+     ========================================================= */
+
+.login-box::before {
+  content: "B";
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 17px;
+
+  background: #101d33;
+
+  color: #f0a93e;
+
+  border-radius: 13px;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 1.6rem;
+  font-weight: 800;
+
+  box-shadow: 0 8px 20px rgba(16, 29, 51, 0.18);
+}
+
+/* =========================================================
+     TITLE
+     ========================================================= */
+
+.login-box h2 {
+  position: relative;
+
+  width: fit-content;
+
+  margin: 0 auto 7px;
+
+  color: #101d33;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 1.75rem;
+  font-weight: 750;
+
+  line-height: 1.2;
+
+  text-align: center;
+
+  letter-spacing: -0.035em;
+}
+
+.login-box h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -7px;
+
+  width: 38px;
+  height: 5px;
+
+  transform: translateX(-50%) rotate(-1deg);
+
+  background: #f0a93e;
+
+  border-radius: 3px;
+}
+
+/* =========================================================
+     FORM
+     ========================================================= */
+
+.login-box form {
+  margin-top: 30px;
+}
+
+/* =========================================================
+     INPUT
+     ========================================================= */
+
+.login-box input {
+  width: 100%;
+
+  height: 50px;
+
+  padding: 0 15px;
+
+  margin-bottom: 14px;
+
+  background: #fafbfc;
+
+  color: #1c2940;
+
+  border: 1px solid #dce2ec;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  font-family: "Inter", "Segoe UI", sans-serif;
+
+  font-size: 0.82rem;
+
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-box input::placeholder {
+  color: #9aa3b3;
+}
+
+.login-box input:hover {
+  border-color: #c9d1df;
+}
+
+.login-box input:focus {
+  background: #ffffff;
+
+  border-color: #f0a93e;
+
+  box-shadow: 0 0 0 3px rgba(240, 169, 62, 0.12);
+}
+
+.login-box input:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+}
+
+/* =========================================================
+     PASSWORD WRAPPER
+     ========================================================= */
+
+.password-wrapper {
+  position: relative;
+
+  width: 100%;
+}
+
+.password-wrapper input {
+  padding-right: 50px;
+}
+
+/* =========================================================
+     PASSWORD TOGGLE
+     ========================================================= */
+
+.toggle-password-btn {
+  position: absolute;
+
+  top: 50%;
+  right: 13px;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+
+  padding: 0;
+
+  background: transparent;
+
+  color: #7c8799;
+
+  border: none;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.toggle-password-btn:hover {
+  background: #f0f2f6;
+
+  color: #101d33;
+}
+
+.toggle-password-btn:active {
+  transform: translateY(-50%) scale(0.94);
+}
+
+.toggle-password-btn:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+/* =========================================================
+     FORGOT PASSWORD
+     ========================================================= */
+
+.forgot-password {
+  width: fit-content;
+
+  margin: 1px 0 19px auto;
+
+  color: #53627a;
+
+  font-size: 0.67rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+  color: #d89425;
+
+  text-decoration: underline;
+}
+
+/* =========================================================
+     LOGIN BUTTON
+     ========================================================= */
+
+.login-submit-btn {
+  width: 100%;
+
+  height: 51px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #101d33;
+
+  color: #ffffff;
+
+  border: 1px solid #101d33;
+
+  border-radius: 9px;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 0.01em;
+
+  cursor: pointer;
+
+  box-shadow: 0 7px 16px rgba(16, 29, 51, 0.16);
+
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-submit-btn:hover {
+  background: #f0a93e;
+
+  color: #101d33;
+
+  border-color: #f0a93e;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 20px rgba(240, 169, 62, 0.22);
+}
+
+.login-submit-btn:active {
+  transform: translateY(0);
+}
+
+.login-submit-btn:disabled {
+  background: #8993a3;
+
+  color: #ffffff;
+
+  border-color: #8993a3;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+     SMALL BRAND TEXT
+     ========================================================= */
+
+.login-box::after {
+  content: "BIMBELKU TIGABINANGA • PORTAL AKADEMIK";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -34px;
+
+  color: #8d96a6;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.48rem;
+
+  letter-spacing: 0.08em;
+
+  text-align: center;
+}
+
+/* =========================================================
+     FOCUS ACCESSIBILITY
+     ========================================================= */
+
+.login-submit-btn:focus-visible,
+.toggle-password-btn:focus-visible,
+.forgot-password:focus-visible {
+  outline: 3px solid rgba(240, 169, 62, 0.35);
+
+  outline-offset: 3px;
+}
+
+/* =========================================================
+     TABLET
+     ========================================================= */
+
+@media (max-width: 600px) {
+  .login-page {
+    padding: 22px;
+  }
+
+  .login-page::before {
+    width: 360px;
+    height: 360px;
+
+    left: -190px;
+    top: -190px;
+  }
+
+  .login-page::after {
+    width: 300px;
+    height: 300px;
+
+    right: -160px;
+    bottom: -160px;
+  }
+
+  .login-box {
+    max-width: 410px;
+
+    padding: 35px 30px 32px;
+
+    border-radius: 17px;
+  }
+}
+
+/* =========================================================
+     MOBILE
+     ========================================================= */
+
+@media (max-width: 420px) {
+  .login-page {
+    padding: 18px;
+  }
+
+  .login-box {
+    padding: 31px 23px 28px;
+
+    border-radius: 15px;
+  }
+
+  .login-box::before {
+    width: 49px;
+    height: 49px;
+
+    margin-bottom: 15px;
+
+    font-size: 1.4rem;
+  }
+
+  .login-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .login-box form {
+    margin-top: 27px;
+  }
+
+  .login-box input {
+    height: 48px;
+
+    font-size: 0.78rem;
+  }
+
+  .login-submit-btn {
+    height: 49px;
+  }
+
+  .login-box::after {
+    font-size: 0.42rem;
+
+    bottom: -29px;
+  }
+}
+
+/* =========================================================
+     VERY SMALL SCREEN
+     ========================================================= */
+
+@media (max-width: 340px) {
+  .login-page {
+    padding: 12px;
+  }
+
+  .login-box {
+    padding: 28px 18px 25px;
+  }
+}

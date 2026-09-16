@@ -1,0 +1,1378 @@
+/* =========================================================
+   DATA TENTOR - MODERN UI
+   Prefix: dtx-
+   Theme: #2563eb / #f7f9fc
+   ========================================================= */
+
+.dtx-page,
+.dtx-page * {
+  box-sizing: border-box;
+}
+
+.dtx-page {
+  min-height: 100vh;
+  width: 100%;
+
+  padding: 40px;
+
+  background: radial-gradient(
+      circle at 10% 0%,
+      rgba(235, 169, 37, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(241, 201, 99, 0.06),
+      transparent 28%
+    ),
+    #fcfaf7;
+
+  color: #332b17;
+
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* =========================================================
+      HEADER
+      ========================================================= */
+
+.dtx-header {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto 28px;
+}
+
+.dtx-title-wrapper {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.dtx-title-icon {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #edf4ff;
+
+  color: #ebb025;
+
+  font-size: 21px;
+
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.08);
+}
+
+.dtx-title {
+  margin: 0;
+
+  color: #271c11;
+
+  font-size: clamp(25px, 3vw, 32px);
+
+  line-height: 1.2;
+
+  letter-spacing: -0.8px;
+
+  font-weight: 800;
+}
+
+.dtx-subtitle {
+  margin: 5px 0 0;
+
+  color: #8b95a5;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+      TOOLBAR
+      ========================================================= */
+
+.dtx-toolbar {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+/* =========================================================
+      SEARCH
+      ========================================================= */
+
+.dtx-search-wrapper {
+  position: relative;
+
+  width: min(380px, 100%);
+}
+
+.dtx-search-icon {
+  position: absolute;
+
+  top: 50%;
+  left: 14px;
+
+  transform: translateY(-50%);
+
+  color: #8994a5;
+
+  font-size: 14px;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+.dtx-search-input {
+  width: 100%;
+  height: 46px;
+
+  padding: 0 14px 0 40px;
+
+  border: 1px solid #dfe4ec;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #38301d;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.dtx-search-input::placeholder {
+  color: #a8b0bd;
+}
+
+.dtx-search-input:hover {
+  border-color: #cbd4e0;
+}
+
+.dtx-search-input:focus {
+  border-color: #eb9c25;
+
+  background: #ffffff;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+/* =========================================================
+      ADD BUTTON
+      ========================================================= */
+
+.dtx-add-button {
+  min-height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 17px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #ff7700;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 750;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
+
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dtx-add-button:hover {
+  background: #d8711d;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 12px 25px rgba(235, 123, 37, 0.25);
+}
+
+.dtx-add-button:active {
+  transform: translateY(0);
+}
+
+.dtx-add-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 6px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  font-size: 17px;
+
+  line-height: 1;
+}
+
+/* =========================================================
+      TABLE CARD
+      ========================================================= */
+
+.dtx-table-card {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border: 1px solid #e7ebf2;
+
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.06);
+}
+
+/* =========================================================
+      TABLE TOP
+      ========================================================= */
+
+.dtx-table-top {
+  min-height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 18px 22px;
+
+  border-bottom: 1px solid #edf0f5;
+
+  background: #ffffff;
+}
+
+.dtx-table-top-title {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 15px;
+
+  line-height: 1.3;
+
+  font-weight: 750;
+}
+
+.dtx-table-top-subtitle {
+  margin: 4px 0 0;
+
+  color: #9aa3b2;
+
+  font-size: 10px;
+}
+
+.dtx-table-top-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 30px;
+
+  padding: 0 11px;
+
+  border: 1px solid #dce8ff;
+
+  border-radius: 999px;
+
+  background: #edf4ff;
+
+  color: #eb5625;
+
+  font-size: 10px;
+
+  font-weight: 750;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+      TABLE SCROLL
+      ========================================================= */
+
+.dtx-table-scroll {
+  width: 100%;
+
+  overflow-x: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.dtx-table-scroll::-webkit-scrollbar {
+  height: 7px;
+}
+
+.dtx-table-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dtx-table-scroll::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: #cbd5e1;
+}
+
+.dtx-table-scroll::-webkit-scrollbar-thumb:hover {
+  background: #aeb9c8;
+}
+
+/* =========================================================
+      TABLE
+      ========================================================= */
+
+.dtx-table {
+  width: 100%;
+
+  min-width: 950px;
+
+  border-collapse: collapse;
+
+  color: #344054;
+
+  font-size: 12px;
+}
+
+.dtx-table thead {
+  background: #fafbfd;
+}
+
+.dtx-table th {
+  height: 48px;
+
+  padding: 0 16px;
+
+  border-bottom: 1px solid #e7ebf2;
+
+  color: #7b8697;
+
+  text-align: left;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2px;
+
+  white-space: nowrap;
+}
+
+.dtx-table td {
+  height: 68px;
+
+  padding: 10px 16px;
+
+  border-bottom: 1px solid #f0f2f6;
+
+  vertical-align: middle;
+}
+
+.dtx-table tbody tr {
+  background: #ffffff;
+
+  transition: background 0.2s ease;
+}
+
+.dtx-table tbody tr:hover {
+  background: #fafcff;
+}
+
+.dtx-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================================
+      COLUMN WIDTH
+      ========================================================= */
+
+.dtx-col-number {
+  width: 55px;
+
+  text-align: center !important;
+}
+
+.dtx-col-nama {
+  min-width: 190px;
+}
+
+.dtx-col-mapel {
+  min-width: 160px;
+}
+
+.dtx-col-nohp {
+  min-width: 140px;
+}
+
+.dtx-col-email {
+  min-width: 220px;
+}
+
+.dtx-col-status {
+  min-width: 110px;
+}
+
+.dtx-col-aksi {
+  min-width: 180px;
+}
+
+/* =========================================================
+      NUMBER
+      ========================================================= */
+
+.dtx-number {
+  color: #9aa3b2;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  font-weight: 650;
+}
+
+/* =========================================================
+      NAME CELL
+      ========================================================= */
+
+.dtx-name-cell {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+.dtx-avatar {
+  width: 36px;
+  height: 36px;
+
+  flex: 0 0 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #edf4ff;
+
+  color: #eb8525;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.dtx-name-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.dtx-name {
+  display: block;
+
+  overflow: hidden;
+
+  max-width: 190px;
+
+  color: #263246;
+
+  font-size: 12px;
+
+  font-weight: 750;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.dtx-name-label {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #a0a8b6;
+
+  font-size: 9px;
+}
+
+/* =========================================================
+      MAPEL
+      ========================================================= */
+
+.dtx-mapel {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 28px;
+
+  padding: 0 9px;
+
+  border: 1px solid #e4eaf4;
+
+  border-radius: 7px;
+
+  background: #f8faff;
+
+  color: #526074;
+
+  font-size: 10px;
+
+  font-weight: 650;
+}
+
+/* =========================================================
+      CONTACT
+      ========================================================= */
+
+.dtx-contact {
+  color: #526074;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+      EMAIL
+      ========================================================= */
+
+.dtx-email {
+  display: block;
+
+  overflow: hidden;
+
+  max-width: 220px;
+
+  color: #526074;
+
+  font-size: 11px;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+      STATUS
+      ========================================================= */
+
+.dtx-status {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  min-height: 28px;
+
+  padding: 0 9px;
+
+  border-radius: 999px;
+
+  font-size: 10px;
+
+  font-weight: 750;
+
+  white-space: nowrap;
+}
+
+.dtx-status-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+}
+
+.dtx-status-active {
+  border: 1px solid #ccebd8;
+
+  background: #effbf4;
+
+  color: #187441;
+}
+
+.dtx-status-active .dtx-status-dot {
+  background: #22a35a;
+
+  box-shadow: 0 0 0 3px rgba(34, 163, 90, 0.08);
+}
+
+.dtx-status-inactive {
+  border: 1px solid #f0d2d2;
+
+  background: #fff5f5;
+
+  color: #c53030;
+}
+
+.dtx-status-inactive .dtx-status-dot {
+  background: #dc2626;
+}
+
+/* =========================================================
+      ACTIONS
+      ========================================================= */
+
+.dtx-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.dtx-action-button {
+  min-height: 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0 9px;
+
+  border: 1px solid transparent;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dtx-action-button:hover {
+  transform: translateY(-1px);
+}
+
+/* EDIT */
+
+.dtx-edit-button {
+  border-color: #dce8ff;
+
+  background: #f3f7ff;
+
+  color: #2563eb;
+}
+
+.dtx-edit-button:hover {
+  border-color: #c5d9ff;
+
+  background: #eaf1ff;
+
+  color: #d8771d;
+}
+
+/* DELETE */
+
+.dtx-delete-button {
+  border-color: #f4d2d2;
+
+  background: #fff5f5;
+
+  color: #dc2626;
+}
+
+.dtx-delete-button:hover {
+  border-color: #f1bcbc;
+
+  background: #feecec;
+
+  color: #b91c1c;
+}
+
+/* =========================================================
+      EMPTY DATA
+      ========================================================= */
+
+.dtx-empty {
+  height: 280px;
+
+  text-align: center;
+}
+
+.dtx-empty-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 260px;
+}
+
+.dtx-empty-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  border-radius: 14px;
+
+  background: #f1f4f9;
+
+  color: #8994a5;
+
+  font-size: 21px;
+}
+
+.dtx-empty-content h3 {
+  margin: 0;
+
+  color: #526074;
+
+  font-size: 13px;
+
+  font-weight: 750;
+}
+
+.dtx-empty-content p {
+  margin: 6px 0 0;
+
+  color: #a0a8b6;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+      MODAL OVERLAY
+      ========================================================= */
+
+.dtx-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(15, 23, 42, 0.45);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  animation: dtx-overlay-in 0.2s ease;
+}
+
+/* =========================================================
+      MODAL
+      ========================================================= */
+
+.dtx-modal {
+  width: min(520px, 100%);
+
+  max-height: calc(100vh - 50px);
+
+  overflow-y: auto;
+
+  border: 1px solid #e7ebf2;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.18);
+
+  animation: dtx-modal-in 0.25s ease;
+}
+
+.dtx-modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dtx-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dtx-modal::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: #cbd5e1;
+}
+
+/* =========================================================
+      MODAL HEADER
+      ========================================================= */
+
+.dtx-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px 23px;
+
+  border-bottom: 1px solid #edf0f5;
+}
+
+.dtx-modal-title-wrapper {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.dtx-modal-icon {
+  width: 40px;
+  height: 40px;
+
+  flex: 0 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #edf4ff;
+
+  color: #2563eb;
+
+  font-size: 17px;
+}
+
+.dtx-modal-header h2 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 17px;
+
+  line-height: 1.3;
+
+  font-weight: 800;
+}
+
+.dtx-modal-subtitle {
+  margin: 4px 0 0;
+
+  color: #8b95a5;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+.dtx-modal-close {
+  width: 32px;
+  height: 32px;
+
+  flex: 0 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #f4f6f9;
+
+  color: #7c8798;
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.dtx-modal-close:hover {
+  background: #edf1f6;
+
+  color: #263246;
+
+  transform: rotate(3deg);
+}
+
+/* =========================================================
+      MODAL FORM
+      ========================================================= */
+
+.dtx-modal-form {
+  padding: 23px;
+}
+
+.dtx-modal-field {
+  margin-bottom: 17px;
+}
+
+.dtx-modal-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #344054;
+
+  font-size: 11px;
+
+  font-weight: 750;
+}
+
+.dtx-modal-field label span {
+  margin-left: 3px;
+
+  color: #ef4444;
+}
+
+/* =========================================================
+      MODAL INPUT
+      ========================================================= */
+
+.dtx-modal-input,
+.dtx-modal-select {
+  width: 100%;
+
+  height: 46px;
+
+  padding: 0 13px;
+
+  border: 1px solid #dfe4ec;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #fbfcfe;
+
+  color: #1d2738;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dtx-modal-input::placeholder {
+  color: #a8b0bd;
+}
+
+.dtx-modal-input:hover,
+.dtx-modal-select:hover {
+  border-color: #cbd4e0;
+}
+
+.dtx-modal-input:focus,
+.dtx-modal-select:focus {
+  border-color: #eb7425;
+
+  background: #ffffff;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+/* =========================================================
+      SELECT
+      ========================================================= */
+
+.dtx-modal-select {
+  appearance: none;
+  -webkit-appearance: none;
+
+  padding-right: 38px;
+
+  cursor: pointer;
+
+  background-image: linear-gradient(45deg, transparent 50%, #8994a5 50%),
+    linear-gradient(135deg, #8994a5 50%, transparent 50%);
+
+  background-position: calc(100% - 16px) 19px, calc(100% - 11px) 19px;
+
+  background-size: 5px 5px, 5px 5px;
+
+  background-repeat: no-repeat;
+}
+
+/* =========================================================
+      FIELD HINT
+      ========================================================= */
+
+.dtx-field-hint {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #9aa3b2;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+      MODAL BUTTONS
+      ========================================================= */
+
+.dtx-modal-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 9px;
+
+  margin-top: 24px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #edf0f5;
+}
+
+.dtx-modal-button {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 15px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dtx-modal-button:hover {
+  transform: translateY(-1px);
+}
+
+/* CANCEL */
+
+.dtx-cancel-button {
+  border: 1px solid #dfe4ec;
+
+  background: #ffffff;
+
+  color: #687386;
+}
+
+.dtx-cancel-button:hover {
+  border-color: #cbd4e0;
+
+  background: #f8fafc;
+
+  color: #344054;
+}
+
+/* SAVE */
+
+.dtx-save-button {
+  border: 1px solid #eb8825;
+
+  background: #eb7e25;
+
+  color: #ffffff;
+
+  box-shadow: 0 7px 18px rgba(37, 99, 235, 0.18);
+}
+
+.dtx-save-button:hover {
+  border-color: #d8581d;
+
+  background: #d8741d;
+
+  box-shadow: 0 10px 22px rgba(235, 139, 37, 0.25);
+}
+
+/* =========================================================
+      ANIMATION
+      ========================================================= */
+
+@keyframes dtx-overlay-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dtx-modal-in {
+  from {
+    opacity: 0;
+
+    transform: translateY(12px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+      TABLET
+      ========================================================= */
+
+@media (max-width: 900px) {
+  .dtx-page {
+    padding: 30px;
+  }
+
+  .dtx-toolbar {
+    align-items: stretch;
+  }
+
+  .dtx-search-wrapper {
+    flex: 1;
+  }
+
+  .dtx-table {
+    min-width: 900px;
+  }
+}
+
+/* =========================================================
+      MOBILE
+      ========================================================= */
+
+@media (max-width: 600px) {
+  .dtx-page {
+    padding: 22px 15px 30px;
+  }
+
+  .dtx-header {
+    margin-bottom: 22px;
+  }
+
+  .dtx-title-wrapper {
+    gap: 11px;
+  }
+
+  .dtx-title-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-basis: 42px;
+
+    border-radius: 11px;
+
+    font-size: 18px;
+  }
+
+  .dtx-title {
+    font-size: 24px;
+
+    letter-spacing: -0.5px;
+  }
+
+  .dtx-subtitle {
+    font-size: 10px;
+  }
+
+  .dtx-toolbar {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    margin-bottom: 15px;
+  }
+
+  .dtx-search-wrapper {
+    width: 100%;
+  }
+
+  .dtx-add-button {
+    width: 100%;
+  }
+
+  .dtx-table-card {
+    border-radius: 14px;
+  }
+
+  .dtx-table-top {
+    min-height: 70px;
+
+    padding: 15px;
+  }
+
+  .dtx-table-top-title {
+    font-size: 13px;
+  }
+
+  .dtx-table-top-subtitle {
+    font-size: 9px;
+  }
+
+  .dtx-table-top-count {
+    min-height: 27px;
+
+    padding: 0 8px;
+
+    font-size: 9px;
+  }
+
+  .dtx-table th {
+    height: 44px;
+
+    padding: 0 13px;
+  }
+
+  .dtx-table td {
+    height: 64px;
+
+    padding: 9px 13px;
+  }
+
+  .dtx-modal-overlay {
+    align-items: flex-end;
+
+    padding: 0;
+  }
+
+  .dtx-modal {
+    width: 100%;
+
+    max-height: 92vh;
+
+    border-radius: 18px 18px 0 0;
+  }
+
+  .dtx-modal-header {
+    padding: 18px;
+  }
+
+  .dtx-modal-form {
+    padding: 18px;
+  }
+
+  .dtx-modal-buttons {
+    flex-direction: column-reverse;
+
+    align-items: stretch;
+  }
+
+  .dtx-modal-button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+      SMALL MOBILE
+      ========================================================= */
+
+@media (max-width: 390px) {
+  .dtx-page {
+    padding: 18px 12px 25px;
+  }
+
+  .dtx-title {
+    font-size: 21px;
+  }
+
+  .dtx-title-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
+
+    font-size: 16px;
+  }
+
+  .dtx-table-top {
+    padding: 13px;
+  }
+
+  .dtx-table-top-subtitle {
+    display: none;
+  }
+
+  .dtx-modal-header h2 {
+    font-size: 15px;
+  }
+
+  .dtx-modal-subtitle {
+    font-size: 9px;
+  }
+}
+
+/* =========================================================
+      REDUCED MOTION
+      ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .dtx-page *,
+  .dtx-page *::before,
+  .dtx-page *::after {
+    scroll-behavior: auto !important;
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}

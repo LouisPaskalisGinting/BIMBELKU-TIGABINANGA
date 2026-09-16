@@ -1,0 +1,675 @@
+/* =====================================================================
+   BIMBELKU TIGABINANGA
+   LANDING PAGE MANAGEMENT
+   ===================================================================== */
+
+.landing-management {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  color: #1b2233;
+
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* =====================================================================
+     HEADER
+     ===================================================================== */
+
+.landing-header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+
+  margin-bottom: 18px;
+  padding: 29px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe4f2;
+  border-radius: 17px;
+
+  box-shadow: 0 4px 18px rgba(16, 29, 51, 0.05);
+
+  overflow: hidden;
+}
+
+.landing-header::after {
+  content: "";
+
+  position: absolute;
+
+  right: 80px;
+  bottom: -24px;
+
+  width: 260px;
+  height: 75px;
+
+  border-top: 3px solid rgba(240, 169, 62, 0.22);
+
+  transform: rotate(-2deg);
+
+  pointer-events: none;
+}
+
+.landing-heading {
+  position: relative;
+
+  z-index: 2;
+}
+
+/* =====================================================================
+     EYEBROW
+     ===================================================================== */
+
+.landing-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 9px;
+  padding: 5px 9px;
+
+  background: #eef1fa;
+
+  color: #35507f;
+
+  border-radius: 5px;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.61rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.landing-eyebrow span {
+  width: 6px;
+  height: 6px;
+
+  background: #f0a93e;
+
+  border-radius: 50%;
+}
+
+/* =====================================================================
+     TITLE
+     ===================================================================== */
+
+.landing-heading h1 {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0 0 9px;
+
+  color: #101d33;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 2rem;
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.035em;
+}
+
+.landing-heading h1::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -3px;
+
+  width: 55%;
+
+  height: 8px;
+
+  background: rgba(240, 169, 62, 0.4);
+
+  border-radius: 3px;
+
+  z-index: -1;
+
+  transform: rotate(-1deg);
+}
+
+.landing-heading p {
+  max-width: 680px;
+
+  margin: 0;
+
+  color: #737e93;
+
+  font-size: 0.77rem;
+
+  line-height: 1.65;
+}
+
+/* =====================================================================
+     HEADER INFO
+     ===================================================================== */
+
+.landing-header-info {
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  min-width: 190px;
+
+  padding: 13px 15px;
+
+  background: #f8f9fc;
+
+  border: 1px solid #e1e5ef;
+
+  border-radius: 10px;
+}
+
+.landing-header-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff4df;
+
+  color: #d99427;
+
+  border: 1px solid #f2ddb8;
+
+  border-radius: 9px;
+
+  font-size: 1rem;
+}
+
+.landing-header-info strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #263653;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 0.72rem;
+}
+
+.landing-header-info span {
+  color: #8b94a5;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.54rem;
+}
+
+/* =====================================================================
+     INFO BAR
+     ===================================================================== */
+
+.landing-info-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 66px;
+
+  margin-bottom: 13px;
+  padding: 10px 18px;
+
+  background: #f8f9fc;
+
+  border: 1px solid #e1e5ef;
+
+  border-radius: 11px;
+}
+
+.landing-info-left {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+.landing-info-icon {
+  width: 37px;
+  height: 37px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef1fa;
+
+  border: 1px solid #dce2ef;
+
+  border-radius: 9px;
+
+  color: #405c8a;
+
+  font-size: 0.95rem;
+}
+
+.landing-info-left strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #263653;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 0.73rem;
+}
+
+.landing-info-left span {
+  color: #8b94a5;
+
+  font-size: 0.61rem;
+}
+
+/* =====================================================================
+     SECTION COUNT
+     ===================================================================== */
+
+.landing-section-count {
+  display: flex;
+  align-items: baseline;
+
+  gap: 7px;
+
+  padding-right: 5px;
+}
+
+.landing-section-count strong {
+  color: #263653;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 1rem;
+}
+
+.landing-section-count span {
+  color: #9aa2b1;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.51rem;
+  font-weight: 700;
+
+  letter-spacing: 0.06em;
+}
+
+/* =====================================================================
+     GRID
+     ===================================================================== */
+
+.landing-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 13px;
+}
+
+/* =====================================================================
+     CARD
+     ===================================================================== */
+
+.landing-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 235px;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  color: inherit;
+
+  border: 1px solid #dfe4f2;
+  border-radius: 14px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 14px rgba(16, 29, 51, 0.035);
+
+  overflow: hidden;
+
+  transition: transform 0.22s ease, border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.landing-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 22px;
+
+  width: 48px;
+  height: 4px;
+
+  background: #f0a93e;
+
+  border-radius: 0 0 4px 4px;
+
+  transition: width 0.22s ease;
+}
+
+.landing-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #d1d9e9;
+
+  box-shadow: 0 12px 28px rgba(16, 29, 51, 0.08);
+}
+
+.landing-card:hover::before {
+  width: 78px;
+}
+
+/* =====================================================================
+     CARD TOP
+     ===================================================================== */
+
+.landing-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+}
+
+.landing-number {
+  color: #a2aaba;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.56rem;
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+}
+
+.landing-arrow {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f7f8fb;
+
+  color: #7e899d;
+
+  border: 1px solid #e4e8ef;
+
+  border-radius: 7px;
+
+  font-size: 0.78rem;
+
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.landing-card:hover .landing-arrow {
+  background: #fff2d9;
+
+  color: #d28b20;
+
+  border-color: #f0d7a7;
+}
+
+/* =====================================================================
+     ICON
+     ===================================================================== */
+
+.landing-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  background: #fff5e4;
+
+  border: 1px solid #f1dfbe;
+
+  border-radius: 11px;
+
+  font-size: 1.25rem;
+
+  transition: transform 0.2s ease;
+}
+
+.landing-card:hover .landing-icon {
+  transform: scale(1.05);
+}
+
+/* =====================================================================
+     CONTENT
+     ===================================================================== */
+
+.landing-card-content {
+  flex: 1;
+}
+
+.landing-card-content h3 {
+  margin: 0 0 7px;
+
+  color: #1e2d48;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 0.91rem;
+  font-weight: 700;
+
+  letter-spacing: -0.015em;
+}
+
+.landing-card-content p {
+  max-width: 320px;
+
+  margin: 0;
+
+  color: #8791a3;
+
+  font-size: 0.64rem;
+
+  line-height: 1.65;
+}
+
+/* =====================================================================
+     CARD FOOTER
+     ===================================================================== */
+
+.landing-card-footer {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 19px;
+
+  color: #8791a3;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.52rem;
+
+  letter-spacing: 0.01em;
+}
+
+.landing-card-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: #e7eaf0;
+}
+
+.landing-card-arrow {
+  color: #9ca5b4;
+
+  font-size: 0.78rem;
+
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.landing-card:hover .landing-card-arrow {
+  color: #d79427;
+
+  transform: translateX(3px);
+}
+
+/* =====================================================================
+     FOOTER NOTE
+     ===================================================================== */
+
+.landing-footer-note {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 13px;
+  padding: 11px 4px;
+
+  color: #98a0ae;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.53rem;
+}
+
+.landing-online-dot {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  background: #35a57f;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 3px rgba(53, 165, 127, 0.1);
+}
+
+/* =====================================================================
+     TABLET
+     ===================================================================== */
+
+@media (max-width: 1050px) {
+  .landing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .landing-header-info {
+    min-width: 170px;
+  }
+}
+
+/* =====================================================================
+     MOBILE
+     ===================================================================== */
+
+@media (max-width: 700px) {
+  .landing-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 22px 19px;
+  }
+
+  .landing-header-info {
+    width: 100%;
+  }
+
+  .landing-heading h1 {
+    font-size: 1.7rem;
+  }
+
+  .landing-heading p {
+    font-size: 0.69rem;
+  }
+
+  .landing-info-bar {
+    padding: 10px 14px;
+  }
+
+  .landing-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .landing-card {
+    min-height: 210px;
+
+    padding: 18px;
+  }
+
+  .landing-section-count {
+    display: none;
+  }
+}
+
+/* =====================================================================
+     SMALL MOBILE
+     ===================================================================== */
+
+@media (max-width: 420px) {
+  .landing-eyebrow {
+    font-size: 0.55rem;
+  }
+
+  .landing-heading h1 {
+    font-size: 1.5rem;
+  }
+
+  .landing-card {
+    min-height: 200px;
+  }
+
+  .landing-card-content h3 {
+    font-size: 0.85rem;
+  }
+}
+
+/* =====================================================================
+     ACCESSIBILITY
+     ===================================================================== */
+
+.landing-card:focus-visible {
+  outline: 3px solid rgba(240, 169, 62, 0.5);
+
+  outline-offset: 3px;
+}

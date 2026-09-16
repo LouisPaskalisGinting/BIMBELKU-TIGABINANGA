@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== MODAL BACKGROUND ===== */
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+/* ===== MODAL CARD ===== */
+.modal-card {
+  width: 430px;
+  max-width: 100%;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: modalFade 0.25s ease;
+}
+
+/* ===== TITLE ===== */
+.modal-card h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #14532d;
+}
+
+/* ===== INPUT ===== */
+.modal-card input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #374151;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.modal-card input:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+}
+
+.modal-card input::placeholder {
+  color: #9ca3af;
+}
+
+/* ===== BUTTON WRAPPER ===== */
+.modal-action {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* ===== BUTTON GLOBAL ===== */
+.modal-action button {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* tombol simpan */
+.modal-action button:first-child {
+  background: #166534;
+  color: #ffffff;
+}
+
+.modal-action button:first-child:hover {
+  background: #14532d;
+  transform: translateY(-1px);
+}
+
+/* tombol batal */
+.modal-action button:nth-child(2) {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.modal-action button:nth-child(2):hover {
+  background: #d1d5db;
+  transform: translateY(-1px);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .modal-card {
+    width: 100%;
+    padding: 22px;
+  }
+
+  .modal-card h2 {
+    font-size: 21px;
+  }
+
+  .modal-action {
+    flex-direction: column;
+  }
+}

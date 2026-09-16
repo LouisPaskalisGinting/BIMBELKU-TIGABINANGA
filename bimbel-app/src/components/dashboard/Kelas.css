@@ -1,0 +1,907 @@
+.kls-page,
+.kls-page * {
+  box-sizing: border-box;
+}
+
+.kls-page {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 40px;
+
+  background: radial-gradient(
+      circle at 10% 0%,
+      rgba(249, 115, 22, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(251, 146, 60, 0.06),
+      transparent 28%
+    ),
+    #f7f9fc;
+
+  color: #172033;
+
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.kls-header {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto 28px;
+}
+
+.kls-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 13px;
+
+  margin-bottom: 13px;
+
+  border: 1px solid #fed7aa;
+  border-radius: 999px;
+
+  background: #fff7ed;
+
+  color: #ea580c;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.6px;
+}
+
+.kls-title {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+
+  font-weight: 800;
+}
+
+.kls-subtitle {
+  margin: 11px 0 0;
+
+  color: #7c8798;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.kls-form-card {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto 24px;
+
+  overflow: hidden;
+
+  border: 1px solid #e7ebf2;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.07);
+}
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.kls-card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 25px 28px 20px;
+
+  border-bottom: 1px solid #edf0f5;
+}
+
+.kls-section-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #f97316;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+.kls-form-title {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 21px;
+  font-weight: 800;
+
+  letter-spacing: -0.3px;
+}
+
+.kls-form-description {
+  margin: 6px 0 0;
+
+  color: #8b95a5;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.kls-edit-badge {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 30px;
+
+  padding: 0 12px;
+
+  border: 1px solid #fed7aa;
+  border-radius: 999px;
+
+  background: #fff7ed;
+
+  color: #ea580c;
+
+  font-size: 10px;
+  font-weight: 750;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.kls-form {
+  display: grid;
+
+  grid-template-columns:
+    minmax(220px, 1fr)
+    minmax(220px, 1fr)
+    auto;
+
+  align-items: end;
+
+  gap: 15px;
+
+  padding: 23px 28px 28px;
+}
+
+.kls-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.kls-field label {
+  color: #344054;
+
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.kls-field input,
+.kls-field select {
+  width: 100%;
+  height: 43px;
+
+  padding: 0 13px;
+
+  border: 1px solid #dfe4ec;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #fbfcfe;
+
+  color: #344054;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kls-field input::placeholder {
+  color: #a8b0bd;
+}
+
+.kls-field input:hover,
+.kls-field select:hover {
+  border-color: #cbd4e0;
+}
+
+.kls-field input:focus,
+.kls-field select:focus {
+  border-color: #f97316;
+
+  background: #ffffff;
+
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.08);
+}
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.kls-form-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.kls-btn-submit {
+  height: 43px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 17px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #f97316;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 750;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-shadow: 0 7px 16px rgba(249, 115, 22, 0.18);
+
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kls-btn-submit span {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.kls-btn-submit:hover {
+  background: #ea580c;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 9px 20px rgba(249, 115, 22, 0.24);
+}
+
+.kls-btn-submit:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   CANCEL BUTTON
+========================================================= */
+
+.kls-btn-cancel {
+  height: 43px;
+
+  padding: 0 15px;
+
+  border: 1px solid #dfe4ec;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #667085;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.kls-btn-cancel:hover {
+  border-color: #fed7aa;
+
+  background: #fff7ed;
+
+  color: #ea580c;
+}
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.kls-table-card {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border: 1px solid #e7ebf2;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.07);
+}
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.kls-table-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 27px 28px 23px;
+}
+
+.kls-table-title {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 21px;
+  font-weight: 800;
+
+  letter-spacing: -0.3px;
+}
+
+.kls-table-description {
+  margin: 6px 0 0;
+
+  color: #8b95a5;
+
+  font-size: 11px;
+}
+
+.kls-total {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 8px 12px;
+
+  border: 1px solid #fed7aa;
+  border-radius: 9px;
+
+  background: #fffaf5;
+}
+
+.kls-total-number {
+  color: #ea580c;
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.kls-total-label {
+  color: #9a5b28;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.kls-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border-top: 1px solid #edf0f5;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.kls-table {
+  width: 100%;
+
+  min-width: 760px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.kls-table thead {
+  background: #fff8f3;
+}
+
+.kls-table th {
+  height: 51px;
+
+  padding: 0 20px;
+
+  border-bottom: 1px solid #f3e1d3;
+
+  color: #7c3a13;
+
+  text-align: left;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.2px;
+}
+
+.kls-table td {
+  height: 70px;
+
+  padding: 10px 20px;
+
+  border-bottom: 1px solid #edf0f5;
+
+  color: #667085;
+
+  vertical-align: middle;
+
+  font-size: 12px;
+}
+
+.kls-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================================
+   COLUMN WIDTH
+========================================================= */
+
+.kls-col-name {
+  width: 35%;
+}
+
+.kls-col-program {
+  width: 35%;
+}
+
+.kls-col-action {
+  width: 30%;
+
+  text-align: center !important;
+}
+
+/* =========================================================
+   ROW
+========================================================= */
+
+.kls-table-row {
+  transition: background 0.2s ease;
+}
+
+.kls-table-row:hover {
+  background: #fffaf7;
+}
+
+/* =========================================================
+   CLASS NAME
+========================================================= */
+
+.kls-class-name {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  min-width: 0;
+}
+
+.kls-class-icon {
+  width: 39px;
+  height: 39px;
+
+  flex: 0 0 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #fff7ed, #ffedd5);
+
+  color: #ea580c;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.kls-class-info {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  gap: 3px;
+}
+
+.kls-class-info strong {
+  overflow: hidden;
+
+  color: #344054;
+
+  font-size: 12px;
+  font-weight: 750;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kls-class-info span {
+  color: #9aa3b2;
+
+  font-size: 9px;
+}
+
+/* =========================================================
+   PROGRAM BADGE
+========================================================= */
+
+.kls-program-badge {
+  display: inline-flex;
+  align-items: center;
+
+  max-width: 100%;
+
+  min-height: 28px;
+
+  padding: 0 10px;
+
+  overflow: hidden;
+
+  border: 1px solid #fed7aa;
+  border-radius: 7px;
+
+  background: #fff7ed;
+
+  color: #c2410c;
+
+  font-size: 10px;
+  font-weight: 750;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.kls-action-cell {
+  text-align: center;
+}
+
+.kls-action-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+}
+
+/* =========================================================
+   ALL ACTION BUTTONS
+========================================================= */
+
+.kls-btn-detail,
+.kls-btn-edit,
+.kls-btn-delete {
+  min-height: 32px;
+
+  padding: 0 11px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* =========================================================
+   DETAIL
+========================================================= */
+
+.kls-btn-detail {
+  border: 1px solid #fed7aa;
+
+  background: #fff7ed;
+
+  color: #ea580c;
+}
+
+.kls-btn-detail:hover {
+  border-color: #fdba74;
+
+  background: #ffedd5;
+
+  color: #c2410c;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   EDIT
+========================================================= */
+
+.kls-btn-edit {
+  border: 1px solid #dbeafe;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+.kls-btn-edit:hover {
+  border-color: #bfdbfe;
+
+  background: #dbeafe;
+
+  color: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   DELETE
+========================================================= */
+
+.kls-btn-delete {
+  border: 1px solid #fecaca;
+
+  background: #fff5f5;
+
+  color: #dc2626;
+}
+
+.kls-btn-delete:hover {
+  border-color: #fca5a5;
+
+  background: #fee2e2;
+
+  color: #b91c1c;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.kls-empty {
+  height: 250px !important;
+
+  text-align: center;
+}
+
+.kls-empty-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+}
+
+.kls-empty-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 5px;
+
+  border-radius: 13px;
+
+  background: #fff7ed;
+
+  font-size: 21px;
+}
+
+.kls-empty-content strong {
+  color: #344054;
+
+  font-size: 13px;
+}
+
+.kls-empty-content span {
+  color: #9aa3b2;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   TABLE SCROLLBAR
+========================================================= */
+
+.kls-table-wrapper::-webkit-scrollbar {
+  height: 7px;
+}
+
+.kls-table-wrapper::-webkit-scrollbar-track {
+  background: #f8f9fb;
+}
+
+.kls-table-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: #fed7aa;
+}
+
+.kls-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #fdba74;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .kls-page {
+    padding: 30px;
+  }
+
+  .kls-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kls-form-actions {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .kls-page {
+    padding: 20px 14px 30px;
+  }
+
+  .kls-header {
+    margin-bottom: 21px;
+  }
+
+  .kls-title {
+    font-size: 29px;
+  }
+
+  .kls-subtitle {
+    font-size: 12px;
+  }
+
+  .kls-card-heading {
+    padding: 21px 18px 18px;
+  }
+
+  .kls-form {
+    grid-template-columns: 1fr;
+
+    padding: 20px 18px 22px;
+  }
+
+  .kls-form-actions {
+    grid-column: auto;
+
+    width: 100%;
+  }
+
+  .kls-btn-submit {
+    flex: 1;
+  }
+
+  .kls-btn-cancel {
+    flex: 0 0 auto;
+  }
+
+  .kls-table-header {
+    align-items: flex-start;
+    flex-direction: column;
+
+    padding: 22px 18px 19px;
+  }
+
+  .kls-total {
+    align-self: flex-start;
+  }
+
+  .kls-table {
+    min-width: 720px;
+  }
+
+  .kls-table th,
+  .kls-table td {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+  .kls-page {
+    padding: 17px 11px 25px;
+  }
+
+  .kls-title {
+    font-size: 26px;
+  }
+
+  .kls-form-actions {
+    flex-direction: column;
+  }
+
+  .kls-btn-submit,
+  .kls-btn-cancel {
+    width: 100%;
+  }
+
+  .kls-action-group {
+    justify-content: flex-start;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .kls-page *,
+  .kls-page *::before,
+  .kls-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,41 @@
+# =========================
+# NODE MODULES
+# =========================
+node_modules/
+Backend/node_modules/
+bimbel-app/node_modules/
+
+# =========================
+# ENVIRONMENT
+# =========================
+.env
+.env.*
+Backend/.env
+Backend/.env.*
+bimbel-app/.env
+bimbel-app/.env.*
+
+# =========================
+# TEST / COVERAGE
+# =========================
+.nyc_output/
+coverage/
+Backend/coverage/
+bimbel-app/coverage/
+
+# =========================
+# LOG
+# =========================
+*.log
+
+# =========================
+# BACKEND UPLOADS
+# =========================
+Backend/uploads/
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+Backend/node_modules/

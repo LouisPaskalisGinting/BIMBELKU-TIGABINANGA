@@ -1,0 +1,1514 @@
+/* =========================================================
+   HERO MANAGEMENT
+   ORANGE PROFESSIONAL THEME
+   Semua selector menggunakan prefix hm-
+========================================================= */
+
+.hm-page,
+.hm-page * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.hm-page {
+  min-height: 100vh;
+  width: 100%;
+
+  padding: 40px;
+
+  background: radial-gradient(
+      circle at 10% 0%,
+      rgba(249, 115, 22, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(251, 146, 60, 0.06),
+      transparent 28%
+    ),
+    #f7f9fc;
+
+  color: #172033;
+
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.hm-header {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto 30px;
+}
+
+.hm-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 13px;
+  margin-bottom: 13px;
+
+  border: 1px solid #fed7aa;
+  border-radius: 999px;
+
+  background: #fff7ed;
+
+  color: #ea580c;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+.hm-title {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+
+  font-weight: 800;
+}
+
+.hm-subtitle {
+  max-width: 700px;
+
+  margin: 12px 0 0;
+
+  color: #7c8798;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.hm-card {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border: 1px solid #e7ebf2;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.07);
+}
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.hm-card-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 28px 30px 24px;
+
+  border-bottom: 1px solid #edf0f5;
+}
+
+.hm-section-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #f97316;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+.hm-section-title {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 22px;
+  line-height: 1.3;
+
+  letter-spacing: -0.4px;
+
+  font-weight: 800;
+}
+
+.hm-section-description {
+  margin: 7px 0 0;
+
+  color: #8b95a5;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.hm-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 34px;
+
+  padding: 0 14px;
+
+  border: 1px solid #fed7aa;
+  border-radius: 999px;
+
+  background: #fff7ed;
+
+  color: #ea580c;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   FORM LAYOUT
+========================================================= */
+
+.hm-form {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(380px, 0.85fr);
+
+  gap: 0;
+
+  align-items: stretch;
+}
+
+.hm-form-content {
+  padding: 30px;
+
+  border-right: 1px solid #edf0f5;
+}
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.hm-field {
+  margin-bottom: 21px;
+}
+
+.hm-field label {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  margin-bottom: 8px;
+
+  color: #344054;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.hm-field label span {
+  color: #ea580c;
+}
+
+.hm-field input[type="text"],
+.hm-field textarea {
+  width: 100%;
+
+  border: 1px solid #dfe4ec;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #fbfcfe;
+
+  color: #1d2738;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hm-field input[type="text"] {
+  height: 44px;
+
+  padding: 0 13px;
+}
+
+.hm-field textarea {
+  min-height: 120px;
+
+  padding: 12px 13px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+.hm-field input::placeholder,
+.hm-field textarea::placeholder {
+  color: #a8b0bd;
+}
+
+.hm-field input:hover,
+.hm-field textarea:hover {
+  border-color: #cbd4e0;
+}
+
+.hm-field input:focus,
+.hm-field textarea:focus {
+  border-color: #f97316;
+
+  background: #ffffff;
+
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.08);
+}
+
+.hm-field small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #9aa3b2;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   FILE INPUT
+========================================================= */
+
+.hm-file-wrapper {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 85px;
+
+  border: 1px dashed #fdba74;
+  border-radius: 11px;
+
+  background: #fffaf5;
+
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.hm-file-wrapper:hover {
+  border-color: #f97316;
+
+  background: #fff7ed;
+}
+
+.hm-file-wrapper input[type="file"] {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+
+  cursor: pointer;
+}
+
+.hm-file-info {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 15px;
+}
+
+.hm-file-info > span {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #ffedd5;
+
+  font-size: 18px;
+}
+
+.hm-file-info strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #344054;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.hm-file-info small {
+  margin: 0;
+
+  color: #9aa3b2;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   FORM ACTION
+========================================================= */
+
+.hm-form-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  padding-top: 8px;
+}
+
+.hm-btn-save {
+  min-height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #f97316;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 15px rgba(249, 115, 22, 0.18);
+
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hm-btn-save span {
+  font-size: 14px;
+}
+
+.hm-btn-save:hover {
+  background: #ea580c;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 8px 18px rgba(249, 115, 22, 0.24);
+}
+
+.hm-btn-save:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   PREVIEW SECTION
+========================================================= */
+
+.hm-preview-section {
+  min-width: 0;
+
+  padding: 30px;
+
+  background: #fbfcfe;
+}
+
+.hm-preview-header {
+  margin-bottom: 15px;
+}
+
+.hm-preview-title {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   PREVIEW CARD
+========================================================= */
+
+.hm-preview-card {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 340px;
+
+  overflow: hidden;
+
+  border: 1px solid #e7ebf2;
+  border-radius: 15px;
+
+  background: #eef1f5;
+
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.hm-preview-background {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hm-preview-content {
+  width: 100%;
+
+  padding: 35px;
+}
+
+.hm-preview-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 6px 10px;
+
+  margin-bottom: 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+
+  background: rgba(249, 115, 22, 0.9);
+
+  color: #ffffff;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+.hm-preview-content h2 {
+  max-width: 450px;
+
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: clamp(22px, 3vw, 32px);
+
+  line-height: 1.15;
+
+  letter-spacing: -0.8px;
+
+  font-weight: 800;
+}
+
+.hm-preview-content p {
+  max-width: 430px;
+
+  margin: 0 0 20px;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.hm-preview-button {
+  min-height: 36px;
+
+  padding: 0 15px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #f97316;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   EMPTY PREVIEW
+========================================================= */
+
+.hm-preview-empty {
+  min-height: 340px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 30px;
+
+  text-align: center;
+}
+
+.hm-preview-empty-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 5px;
+
+  border-radius: 14px;
+
+  background: #fff7ed;
+
+  font-size: 22px;
+}
+
+.hm-preview-empty strong {
+  color: #344054;
+
+  font-size: 13px;
+}
+
+.hm-preview-empty span {
+  max-width: 220px;
+
+  color: #9aa3b2;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PREVIEW INFO
+========================================================= */
+
+.hm-preview-info {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 9px;
+
+  margin-top: 14px;
+
+  padding: 12px;
+
+  border: 1px solid #fed7aa;
+  border-radius: 9px;
+
+  background: #fffaf5;
+}
+
+.hm-info-icon {
+  flex-shrink: 0;
+
+  font-size: 13px;
+}
+
+.hm-preview-info p {
+  margin: 0;
+
+  color: #9a5b28;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   MULTIPLE BACKGROUND - SELECTED IMAGES
+========================================================= */
+
+.hm-new-images {
+  margin-top: 15px;
+
+  padding: 15px;
+
+  border: 1px solid #e7ebf2;
+  border-radius: 12px;
+
+  background: #fbfcfe;
+}
+
+.hm-new-images-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 14px;
+}
+
+.hm-new-images-header > div {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  min-width: 0;
+}
+
+.hm-new-images-header strong {
+  color: #344054;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.hm-new-images-header span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 24px;
+  height: 22px;
+
+  padding: 0 7px;
+
+  border-radius: 999px;
+
+  background: #fff7ed;
+
+  color: #ea580c;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.hm-clear-btn {
+  flex-shrink: 0;
+
+  padding: 7px 10px;
+
+  border: 1px solid #fed7aa;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #ea580c;
+
+  font-family: inherit;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.hm-clear-btn:hover {
+  background: #fff7ed;
+
+  border-color: #f97316;
+}
+
+/* =========================================================
+   NEW IMAGE GRID
+========================================================= */
+
+.hm-new-images-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+.hm-new-image {
+  position: relative;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid #e7ebf2;
+  border-radius: 9px;
+
+  background: #ffffff;
+}
+
+.hm-new-image img {
+  display: block;
+
+  width: 100%;
+  height: 100px;
+
+  object-fit: cover;
+}
+
+.hm-new-image-number {
+  position: absolute;
+
+  top: 7px;
+  left: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 6px;
+
+  background: rgba(15, 23, 42, 0.75);
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.hm-remove-image {
+  position: absolute;
+
+  top: 7px;
+  right: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 6px;
+
+  background: rgba(220, 38, 38, 0.92);
+
+  color: #ffffff;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 17px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.hm-remove-image:hover {
+  background: #dc2626;
+
+  transform: scale(1.05);
+}
+
+.hm-new-image-name {
+  overflow: hidden;
+
+  padding: 8px 9px;
+
+  color: #667085;
+
+  font-size: 9px;
+
+  line-height: 1.3;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   FORM BUTTONS
+========================================================= */
+
+.hm-form-actions {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  padding-top: 8px;
+}
+
+.hm-btn-upload {
+  min-height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 16px;
+
+  border: 1px solid #fed7aa;
+  border-radius: 9px;
+
+  background: #fff7ed;
+
+  color: #ea580c;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hm-btn-upload:hover:not(:disabled) {
+  background: #ffedd5;
+
+  border-color: #f97316;
+
+  transform: translateY(-1px);
+}
+
+.hm-btn-upload:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+.hm-btn-upload span {
+  font-size: 13px;
+}
+
+/* =========================================================
+   HERO SLIDER CARD
+========================================================= */
+
+.hm-slider-card {
+  margin-top: 25px;
+
+  overflow: hidden;
+}
+
+.hm-count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 34px;
+
+  padding: 0 13px;
+
+  border: 1px solid #fed7aa;
+  border-radius: 999px;
+
+  background: #fff7ed;
+
+  color: #ea580c;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SLIDER GRID
+========================================================= */
+
+.hm-slider-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+
+  padding: 25px 30px 30px;
+}
+
+.hm-slider-item {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid #e7ebf2;
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hm-slider-item:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.09);
+}
+
+/* =========================================================
+   SLIDER IMAGE
+========================================================= */
+
+.hm-slider-image-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #eef1f5;
+
+  aspect-ratio: 16 / 9;
+}
+
+.hm-slider-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.35s ease;
+}
+
+.hm-slider-item:hover .hm-slider-image {
+  transform: scale(1.03);
+}
+
+/* =========================================================
+   IMAGE NUMBER
+========================================================= */
+
+.hm-slider-number {
+  position: absolute;
+
+  top: 9px;
+  left: 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 27px;
+  height: 27px;
+
+  padding: 0 7px;
+
+  border-radius: 7px;
+
+  background: rgba(15, 23, 42, 0.78);
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.hm-slider-status {
+  position: absolute;
+
+  right: 9px;
+  bottom: 9px;
+
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 25px;
+
+  padding: 0 8px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  font-size: 9px;
+  font-weight: 800;
+
+  backdrop-filter: blur(5px);
+}
+
+.hm-slider-status.active {
+  color: #15803d;
+}
+
+.hm-slider-status.inactive {
+  color: #98a2b3;
+}
+
+/* =========================================================
+   SLIDER DETAIL
+========================================================= */
+
+.hm-slider-detail {
+  padding: 13px;
+}
+
+.hm-slider-filename {
+  overflow: hidden;
+
+  margin-bottom: 11px;
+
+  color: #344054;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.hm-slider-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.hm-btn-toggle,
+.hm-btn-delete {
+  min-height: 32px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+
+  padding: 0 8px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.hm-btn-toggle {
+  border: 1px solid #dfe4ec;
+
+  background: #ffffff;
+
+  color: #667085;
+}
+
+.hm-btn-toggle:hover {
+  border-color: #f97316;
+
+  background: #fff7ed;
+
+  color: #ea580c;
+}
+
+.hm-btn-toggle.active {
+  border-color: #fed7aa;
+
+  background: #fff7ed;
+
+  color: #ea580c;
+}
+
+.hm-btn-delete {
+  border: 1px solid #fecaca;
+
+  background: #ffffff;
+
+  color: #dc2626;
+}
+
+.hm-btn-delete:hover {
+  border-color: #dc2626;
+
+  background: #fef2f2;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.hm-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 180px;
+
+  padding: 30px;
+
+  color: #98a2b3;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   EMPTY SLIDER
+========================================================= */
+
+.hm-empty-slides {
+  min-height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 30px;
+
+  text-align: center;
+}
+
+.hm-empty-slides-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 5px;
+
+  border-radius: 13px;
+
+  background: #fff7ed;
+
+  font-size: 22px;
+}
+
+.hm-empty-slides strong {
+  color: #344054;
+
+  font-size: 12px;
+}
+
+.hm-empty-slides span {
+  color: #98a2b3;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+  .hm-new-images-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hm-slider-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    padding: 22px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .hm-new-images {
+    padding: 12px;
+  }
+
+  .hm-new-images-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 9px;
+  }
+
+  .hm-new-images-header > div {
+    flex-wrap: wrap;
+  }
+
+  .hm-clear-btn {
+    width: 100%;
+  }
+
+  .hm-new-images-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+  }
+
+  .hm-new-image img {
+    height: 90px;
+  }
+
+  .hm-form-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .hm-btn-save,
+  .hm-btn-upload {
+    width: 100%;
+  }
+
+  .hm-slider-grid {
+    grid-template-columns: 1fr;
+
+    padding: 18px;
+  }
+
+  .hm-slider-actions {
+    flex-direction: column;
+  }
+
+  .hm-btn-toggle,
+  .hm-btn-delete {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+  .hm-new-images-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hm-new-image img {
+    height: 150px;
+  }
+
+  .hm-slider-grid {
+    padding: 15px;
+  }
+
+  .hm-count-badge {
+    min-height: 30px;
+
+    font-size: 9px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+  .hm-page {
+    padding: 30px;
+  }
+
+  .hm-form {
+    grid-template-columns: 1fr;
+  }
+
+  .hm-form-content {
+    border-right: none;
+
+    border-bottom: 1px solid #edf0f5;
+  }
+
+  .hm-preview-section {
+    padding: 30px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .hm-page {
+    padding: 20px 14px 30px;
+  }
+
+  .hm-header {
+    margin-bottom: 22px;
+  }
+
+  .hm-title {
+    font-size: 29px;
+
+    letter-spacing: -1px;
+  }
+
+  .hm-subtitle {
+    font-size: 12px;
+  }
+
+  .hm-card {
+    border-radius: 15px;
+  }
+
+  .hm-card-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 22px 18px 20px;
+  }
+
+  .hm-section-title {
+    font-size: 19px;
+  }
+
+  .hm-section-description {
+    font-size: 11px;
+  }
+
+  .hm-status-badge {
+    min-height: 31px;
+
+    font-size: 10px;
+  }
+
+  .hm-form-content {
+    padding: 22px 18px;
+  }
+
+  .hm-preview-section {
+    padding: 22px 18px;
+  }
+
+  .hm-preview-card {
+    min-height: 300px;
+  }
+
+  .hm-preview-empty {
+    min-height: 300px;
+  }
+
+  .hm-preview-content {
+    padding: 24px;
+  }
+
+  .hm-preview-content h2 {
+    font-size: 23px;
+  }
+
+  .hm-form-actions {
+    justify-content: stretch;
+  }
+
+  .hm-btn-save {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+  .hm-page {
+    padding: 17px 11px 25px;
+  }
+
+  .hm-title {
+    font-size: 26px;
+  }
+
+  .hm-eyebrow {
+    font-size: 9px;
+  }
+
+  .hm-card-header {
+    padding: 19px 15px;
+  }
+
+  .hm-form-content,
+  .hm-preview-section {
+    padding: 19px 15px;
+  }
+
+  .hm-preview-content {
+    padding: 20px;
+  }
+
+  .hm-preview-content h2 {
+    font-size: 20px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hm-page *,
+  .hm-page *::before,
+  .hm-page *::after {
+    scroll-behavior: auto !important;
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}

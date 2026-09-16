@@ -1,0 +1,555 @@
+/* =========================================
+   KONTAK MANAGEMENT
+   Prefix: ktk-
+   Tema: Orange Professional
+   ========================================= */
+
+.ktk-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px;
+  box-sizing: border-box;
+
+  background: #f8fafc;
+  color: #1f2937;
+}
+
+/* =========================================
+     HEADER
+     ========================================= */
+
+.ktk-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.ktk-header-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ktk-header-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #fed7aa;
+  border-radius: 12px;
+
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.ktk-header-icon span {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.ktk-header h1 {
+  margin: 0 0 5px;
+
+  color: #1f2937;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.ktk-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================
+     SUMMARY
+     ========================================= */
+
+.ktk-summary {
+  display: flex;
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+.ktk-summary-card {
+  min-width: 220px;
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 15px 18px;
+  box-sizing: border-box;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.05);
+}
+
+.ktk-summary-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #fff7ed;
+  color: #f97316;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.ktk-summary-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ktk-summary-info span {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.ktk-summary-info strong {
+  color: #1f2937;
+  font-size: 16px;
+}
+
+/* =========================================
+     CARD
+     ========================================= */
+
+.ktk-card {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+}
+
+.ktk-card-header {
+  padding: 21px 24px;
+
+  border-bottom: 1px solid #e5e7eb;
+  border-left: 4px solid #f97316;
+
+  background: linear-gradient(135deg, #fff7ed, #ffffff);
+}
+
+.ktk-card-header h2 {
+  margin: 0 0 5px;
+
+  color: #1f2937;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.ktk-card-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+/* =========================================
+     FORM
+     ========================================= */
+
+.ktk-form {
+  padding: 27px;
+}
+
+.ktk-section {
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ktk-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.ktk-section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+.ktk-section-number {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #fff7ed;
+  color: #f97316;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ktk-section-title h3 {
+  margin: 0 0 3px;
+
+  color: #374151;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ktk-section-title p {
+  margin: 0;
+
+  color: #9ca3af;
+
+  font-size: 11px;
+}
+
+/* =========================================
+     GRID
+     ========================================= */
+
+.ktk-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 19px 20px;
+}
+
+.ktk-full {
+  grid-column: 1 / -1;
+}
+
+/* =========================================
+     FORM GROUP
+     ========================================= */
+
+.ktk-form-group {
+  min-width: 0;
+}
+
+.ktk-form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #374151;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ktk-form-group label span {
+  color: #ef4444;
+}
+
+.ktk-form-group input,
+.ktk-form-group textarea {
+  width: 100%;
+
+  display: block;
+
+  padding: 11px 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #1f2937;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.ktk-form-group input {
+  height: 43px;
+}
+
+.ktk-form-group textarea {
+  resize: vertical;
+
+  min-height: 90px;
+
+  line-height: 1.6;
+}
+
+.ktk-form-group input:focus,
+.ktk-form-group textarea:focus {
+  border-color: #f97316;
+
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+}
+
+.ktk-form-group input::placeholder,
+.ktk-form-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+.ktk-form-group small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #9ca3af;
+
+  font-size: 11px;
+  text-align: right;
+}
+
+/* =========================================
+     FOOTER
+     ========================================= */
+
+.ktk-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+
+  padding-top: 23px;
+}
+
+/* =========================================
+     BUTTON
+     ========================================= */
+
+.ktk-btn-secondary,
+.ktk-btn-save {
+  min-height: 41px;
+
+  padding: 0 16px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.ktk-btn-secondary {
+  border: 1px solid #d1d5db;
+
+  background: #ffffff;
+  color: #4b5563;
+}
+
+.ktk-btn-secondary:hover:not(:disabled) {
+  border-color: #9ca3af;
+  background: #f9fafb;
+}
+
+.ktk-btn-save {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border: 1px solid #f97316;
+
+  background: #f97316;
+  color: #ffffff;
+
+  box-shadow: 0 3px 8px rgba(249, 115, 22, 0.18);
+}
+
+.ktk-btn-save:hover:not(:disabled) {
+  border-color: #ea580c;
+  background: #ea580c;
+
+  transform: translateY(-1px);
+}
+
+.ktk-btn-secondary:disabled,
+.ktk-btn-save:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+     LOADING
+     ========================================= */
+
+.ktk-loading {
+  min-height: 450px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  color: #9ca3af;
+
+  font-size: 13px;
+}
+
+.ktk-loading p {
+  margin: 0;
+}
+
+.ktk-spinner {
+  width: 34px;
+  height: 34px;
+
+  border: 3px solid #fed7aa;
+  border-top-color: #f97316;
+
+  border-radius: 50%;
+
+  animation: ktk-spin 0.8s linear infinite;
+}
+
+.ktk-btn-spinner {
+  width: 14px;
+  height: 14px;
+
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+
+  border-radius: 50%;
+
+  animation: ktk-spin 0.8s linear infinite;
+}
+
+@keyframes ktk-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+     RESPONSIVE
+     ========================================= */
+
+@media (max-width: 800px) {
+  .ktk-page {
+    padding: 22px 18px;
+  }
+
+  .ktk-header h1 {
+    font-size: 24px;
+  }
+
+  .ktk-summary {
+    flex-direction: column;
+  }
+
+  .ktk-summary-card {
+    width: 100%;
+  }
+
+  .ktk-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ktk-full {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .ktk-page {
+    padding: 18px 14px;
+  }
+
+  .ktk-header-content {
+    align-items: flex-start;
+  }
+
+  .ktk-header-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .ktk-header h1 {
+    font-size: 22px;
+  }
+
+  .ktk-header p {
+    font-size: 12px;
+  }
+
+  .ktk-card-header {
+    padding: 18px;
+  }
+
+  .ktk-form {
+    padding: 18px;
+  }
+
+  .ktk-form-footer {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .ktk-btn-secondary,
+  .ktk-btn-save {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .ktk-page {
+    padding: 14px 10px;
+  }
+
+  .ktk-card {
+    border-radius: 11px;
+  }
+
+  .ktk-section-title {
+    gap: 9px;
+  }
+
+  .ktk-section-number {
+    width: 32px;
+    height: 32px;
+  }
+}

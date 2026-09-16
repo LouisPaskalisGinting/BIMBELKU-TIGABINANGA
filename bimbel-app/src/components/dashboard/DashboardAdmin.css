@@ -1,0 +1,1142 @@
+/* ============================================================
+   DASHBOARD ADMIN
+   ============================================================ */
+
+.dashboard-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0;
+
+  color: #050505;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* ============================================================
+     HEADER
+     ============================================================ */
+
+.dashboard-header {
+  position: relative;
+
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 30px 32px 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe4f2;
+  border-radius: 18px;
+
+  box-shadow: 0 3px 14px rgba(16, 29, 51, 0.045);
+
+  overflow: hidden;
+}
+
+.dashboard-header-content {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+
+  z-index: 2;
+}
+
+/* ============================================================
+     HEADER TEXT
+     ============================================================ */
+
+.dashboard-heading {
+  max-width: 650px;
+}
+
+.dashboard-label {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 10px;
+
+  color: #8b95aa;
+
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.62rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* PERBAIKAN:
+     span sebelumnya berukuran 6000px sehingga merusak layout */
+
+.dashboard-label span {
+  display: inline-block;
+
+  width: 7px;
+  height: 7px;
+
+  margin-right: 8px;
+
+  background: #f0a93e;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 4px rgba(240, 169, 62, 0.12);
+}
+
+/* ============================================================
+     TITLE
+     ============================================================ */
+
+.dashboard-heading h1 {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0 0 10px;
+
+  color: #101d33;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: clamp(2rem, 3vw, 2.65rem);
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.04em;
+}
+
+/* Garis dekorasi di bawah judul */
+
+.dashboard-heading h1::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -3px;
+
+  width: 58%;
+  height: 9px;
+
+  background: rgba(240, 169, 62, 0.42);
+
+  border-radius: 3px;
+
+  z-index: -1;
+
+  transform: rotate(-1deg);
+}
+
+/* ============================================================
+     WAVE EMOJI
+     ============================================================ */
+
+.wave {
+  display: inline-block;
+
+  margin-left: 8px;
+
+  font-size: 0.85em;
+
+  transform-origin: 70% 70%;
+
+  animation: waveHand 2.5s ease-in-out infinite;
+}
+
+@keyframes waveHand {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  10%,
+  30% {
+    transform: rotate(12deg);
+  }
+
+  20%,
+  40% {
+    transform: rotate(-8deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ============================================================
+     HEADER DESCRIPTION
+     ============================================================ */
+
+.dashboard-heading p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #657087;
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+}
+
+/* ============================================================
+     HEADER BUTTONS
+     ============================================================ */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 43px;
+
+  padding: 0 17px;
+
+  border-radius: 9px;
+
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+     PRIMARY BUTTON
+     ============================================================ */
+
+.btn-primary {
+  gap: 7px;
+
+  background: #f0a93e;
+
+  color: #6b4508;
+
+  border: 1px solid #e6a039;
+
+  box-shadow: 0 6px 16px rgba(240, 169, 62, 0.2);
+}
+
+.btn-primary:hover {
+  background: #ef9f27;
+
+  box-shadow: 0 8px 20px rgba(240, 169, 62, 0.28);
+}
+
+.btn-primary span {
+  font-size: 1rem;
+}
+
+/* ============================================================
+     OUTLINE BUTTON
+     ============================================================ */
+
+.btn-outline {
+  background: #ffffff;
+
+  color: #1f3563;
+
+  border: 1px solid #dfe4f2;
+}
+
+.btn-outline:hover {
+  background: #f7f8fc;
+
+  border-color: #c8d1e5;
+}
+
+/* ============================================================
+     HEADER DECORATION
+     ============================================================ */
+
+.header-decoration {
+  position: absolute;
+
+  right: 25px;
+  bottom: -18px;
+
+  width: 180px;
+  height: 55px;
+
+  border-top: 3px solid rgba(240, 169, 62, 0.3);
+
+  transform: rotate(-2deg);
+
+  pointer-events: none;
+}
+
+/* ============================================================
+     KPI CONTAINER
+     ============================================================ */
+
+.kpi-container {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+}
+
+/* ============================================================
+     KPI CARD
+     ============================================================ */
+
+.kpi-card {
+  position: relative;
+
+  min-height: 140px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+
+  padding: 22px 21px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe4f2;
+
+  border-radius: 15px;
+
+  box-shadow: 0 3px 14px rgba(16, 29, 51, 0.045);
+
+  overflow: hidden;
+
+  transition: transform 0.22s ease, box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(240, 169, 62, 0.55);
+
+  box-shadow: 0 10px 25px rgba(16, 29, 51, 0.09);
+}
+
+/* ============================================================
+     KPI ACCENT
+     ============================================================ */
+
+.kpi-accent {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 4px;
+
+  background: #f0a93e;
+}
+
+/* ============================================================
+     KPI ICON
+     ============================================================ */
+
+.kpi-icon {
+  width: 56px;
+  height: 56px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef1fa;
+
+  border: 1px solid #dfe4f2;
+
+  border-radius: 13px;
+
+  font-size: 1.65rem;
+
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.kpi-card:hover .kpi-icon {
+  transform: scale(1.05);
+  background: #f4f6fc;
+}
+
+/* ============================================================
+     KPI INFORMATION
+     ============================================================ */
+
+.kpi-information {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.kpi-title {
+  margin-bottom: 4px;
+
+  color: #647087;
+
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.kpi-value {
+  margin-bottom: 3px;
+
+  color: #101d33;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.kpi-description {
+  color: #9aa2b2;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.59rem;
+
+  line-height: 1.4;
+}
+
+/* ============================================================
+     MAIN DASHBOARD GRID
+     ============================================================ */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.65fr)
+    minmax(300px, 0.95fr);
+
+  gap: 20px;
+
+  align-items: stretch;
+
+  margin-bottom: 24px;
+}
+
+/* ============================================================
+     PANEL
+     ============================================================ */
+
+.panel {
+  position: relative;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe4f2;
+
+  border-radius: 16px;
+
+  box-shadow: 0 3px 14px rgba(16, 29, 51, 0.045);
+
+  overflow: hidden;
+}
+
+/* Garis amber bagian atas panel */
+
+.panel::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 30px;
+
+  width: 80px;
+  height: 4px;
+
+  background: #f0a93e;
+
+  border-radius: 0 0 4px 4px;
+}
+
+/* ============================================================
+     PANEL HEADER
+     ============================================================ */
+
+.panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 25px 28px 19px;
+
+  border-bottom: 1px dashed #dfe4f2;
+}
+
+.section-eyebrow {
+  margin-bottom: 5px;
+
+  color: #8b95aa;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.58rem;
+  font-weight: 600;
+
+  letter-spacing: 0.05em;
+}
+
+.panel-header h2 {
+  margin: 0 0 5px;
+
+  color: #101d33;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 1.15rem;
+
+  font-weight: 700;
+}
+
+.panel-header p {
+  margin: 0;
+
+  color: #7a8498;
+
+  font-size: 0.74rem;
+
+  line-height: 1.5;
+}
+
+/* ============================================================
+     REALTIME BADGE
+     ============================================================ */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+
+  padding: 7px 11px;
+
+  background: #eff9f5;
+
+  color: #268265;
+
+  border: 1px solid #ccebe0;
+
+  border-radius: 999px;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.62rem;
+  font-weight: 600;
+}
+
+/* ============================================================
+     REALTIME DOT
+     ============================================================ */
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+
+  background: #36a980;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 3px rgba(54, 169, 128, 0.12);
+
+  animation: realtimePulse 1.8s ease-in-out infinite;
+}
+
+@keyframes realtimePulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* ============================================================
+     NOTIFICATION LIST
+     ============================================================ */
+
+.notification-list {
+  padding: 5px 28px 15px;
+}
+
+.notification-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    43px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 16px 0;
+
+  border-bottom: 1px solid #edf0f6;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+/* ============================================================
+     NOTIFICATION ICON
+     ============================================================ */
+
+.notification-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #eef1fa;
+
+  border: 1px solid #dfe4f2;
+
+  font-size: 1.15rem;
+}
+
+.notification-registration .notification-icon {
+  background: #fff5e4;
+}
+
+.notification-payment .notification-icon {
+  background: #edf5ff;
+}
+
+.notification-attendance .notification-icon {
+  background: #eff9f5;
+}
+
+.notification-schedule .notification-icon {
+  background: #f2efff;
+}
+
+/* ============================================================
+     NOTIFICATION INFO
+     ============================================================ */
+
+.notification-info {
+  min-width: 0;
+}
+
+.notification-info h4 {
+  margin: 0 0 4px;
+
+  color: #1b2942;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.notification-info p {
+  margin: 0;
+
+  color: #7b8497;
+
+  font-size: 0.71rem;
+
+  line-height: 1.5;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+/* ============================================================
+     NOTIFICATION TIME
+     ============================================================ */
+
+.notification-time {
+  color: #a0a7b5;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.58rem;
+
+  white-space: nowrap;
+}
+
+.mobile-time {
+  display: none;
+}
+
+/* ============================================================
+     EMPTY NOTIFICATION
+     ============================================================ */
+
+.empty-notification {
+  min-height: 235px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  color: #929bad;
+
+  text-align: center;
+}
+
+.empty-notification strong {
+  color: #68748a;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 0.82rem;
+}
+
+.empty-notification span {
+  font-size: 0.7rem;
+}
+
+.empty-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 5px;
+
+  background: #f5f6fa;
+
+  border: 1px dashed #d6dcea;
+
+  border-radius: 12px;
+
+  font-size: 1.3rem;
+}
+
+/* ============================================================
+     LOADING SPINNER
+     ============================================================ */
+
+.loading-spinner {
+  width: 27px;
+  height: 27px;
+
+  margin-bottom: 7px;
+
+  border: 3px solid #e5e9f2;
+
+  border-top-color: #f0a93e;
+
+  border-radius: 50%;
+
+  animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================================
+     SUMMARY PANEL
+     ============================================================ */
+
+.summary-panel {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+}
+
+/* ============================================================
+     SUMMARY LIST
+     ============================================================ */
+
+.summary-list {
+  padding: 8px 28px 12px;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 58px;
+
+  padding: 10px 0;
+
+  border-bottom: 1px solid #edf0f6;
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+/* ============================================================
+     SUMMARY LABEL
+     ============================================================ */
+
+.summary-label {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: #667187;
+
+  font-size: 0.74rem;
+}
+
+.summary-indicator {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  background: #9da6b7;
+
+  border-radius: 50%;
+}
+
+/* ============================================================
+     SUMMARY TYPES
+     ============================================================ */
+
+.summary-warning .summary-indicator {
+  background: #f0a93e;
+}
+
+.summary-info .summary-indicator {
+  background: #5476b3;
+}
+
+.summary-success .summary-indicator {
+  background: #36a980;
+}
+
+/* ============================================================
+     SUMMARY VALUE
+     ============================================================ */
+
+.summary-item strong {
+  min-width: 34px;
+
+  padding: 5px 8px;
+
+  background: #f5f6fa;
+
+  color: #1b2942;
+
+  border-radius: 6px;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.72rem;
+
+  text-align: center;
+}
+
+.summary-warning strong {
+  background: #fff5e4;
+
+  color: #946016;
+}
+
+.summary-success strong {
+  background: #eff9f5;
+
+  color: #267d63;
+}
+
+/* ============================================================
+     TABLET
+     ============================================================ */
+
+@media (max-width: 1200px) {
+  .dashboard-header-content {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .header-actions {
+    justify-content: flex-start;
+  }
+
+  .kpi-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-grid {
+    grid-template-columns:
+      minmax(0, 1.4fr)
+      minmax(280px, 1fr);
+  }
+}
+
+/* ============================================================
+     TABLET SMALL
+     ============================================================ */
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-panel {
+    min-height: auto;
+  }
+}
+
+/* ============================================================
+     MOBILE
+     ============================================================ */
+
+@media (max-width: 650px) {
+  .dashboard-page {
+    width: 100%;
+  }
+
+  /* ----------------------------------------------------------
+       HEADER
+       ---------------------------------------------------------- */
+
+  .dashboard-header {
+    padding: 22px 20px 25px;
+
+    border-radius: 14px;
+  }
+
+  .dashboard-header-content {
+    gap: 22px;
+  }
+
+  .dashboard-heading h1 {
+    font-size: 1.85rem;
+  }
+
+  .dashboard-heading p {
+    font-size: 0.78rem;
+  }
+
+  /* ----------------------------------------------------------
+       BUTTONS
+       ---------------------------------------------------------- */
+
+  .header-actions {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  /* ----------------------------------------------------------
+       KPI
+       ---------------------------------------------------------- */
+
+  .kpi-container {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .kpi-card {
+    min-height: 110px;
+
+    padding: 18px;
+  }
+
+  .kpi-icon {
+    width: 49px;
+    height: 49px;
+
+    font-size: 1.4rem;
+  }
+
+  .kpi-value {
+    font-size: 1.55rem;
+  }
+
+  /* ----------------------------------------------------------
+       PANEL HEADER
+       ---------------------------------------------------------- */
+
+  .panel-header {
+    padding: 22px 19px 17px;
+
+    flex-direction: column;
+
+    gap: 13px;
+  }
+
+  /* ----------------------------------------------------------
+       NOTIFICATION
+       ---------------------------------------------------------- */
+
+  .notification-list {
+    padding: 3px 19px 10px;
+  }
+
+  .notification-item {
+    grid-template-columns:
+      39px
+      minmax(0, 1fr);
+
+    gap: 11px;
+
+    padding: 14px 0;
+  }
+
+  .notification-icon {
+    width: 39px;
+    height: 39px;
+
+    font-size: 1rem;
+  }
+
+  .notification-info h4 {
+    font-size: 0.78rem;
+  }
+
+  .notification-info p {
+    font-size: 0.68rem;
+  }
+
+  .notification-time:not(.mobile-time) {
+    display: none;
+  }
+
+  .mobile-time {
+    display: block;
+
+    margin-top: 5px;
+  }
+
+  /* ----------------------------------------------------------
+       SUMMARY
+       ---------------------------------------------------------- */
+
+  .summary-list {
+    padding: 6px 19px 10px;
+  }
+}
+
+/* ============================================================
+     VERY SMALL MOBILE
+     ============================================================ */
+
+@media (max-width: 400px) {
+  .dashboard-heading h1 {
+    font-size: 1.65rem;
+  }
+
+  .dashboard-label {
+    font-size: 0.58rem;
+  }
+
+  .kpi-card {
+    gap: 12px;
+  }
+
+  .kpi-description {
+    font-size: 0.55rem;
+  }
+
+  .panel-header h2 {
+    font-size: 1rem;
+  }
+
+  .panel-header p {
+    font-size: 0.68rem;
+  }
+}
+
+/* ============================================================
+     ACCESSIBILITY
+     ============================================================ */
+
+.dashboard-page button:focus-visible {
+  outline: 3px solid rgba(240, 169, 62, 0.7);
+
+  outline-offset: 2px;
+}
+
+/* ============================================================
+     REDUCED MOTION
+     ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .wave,
+  .status-dot,
+  .loading-spinner {
+    animation: none;
+  }
+
+  .dashboard-page button,
+  .kpi-card,
+  .kpi-icon {
+    transition: none;
+  }
+}

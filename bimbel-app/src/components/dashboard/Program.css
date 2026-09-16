@@ -1,0 +1,831 @@
+/* =====================================================================
+   BIMBELKU TIGABINANGA
+   PROGRAM MANAGEMENT
+   ===================================================================== */
+
+.program-page {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  color: #1b2233;
+
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* =====================================================================
+     HEADER
+     ===================================================================== */
+
+.program-page-header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 18px;
+  padding: 28px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe4f2;
+  border-radius: 17px;
+
+  box-shadow: 0 4px 18px rgba(16, 29, 51, 0.05);
+
+  overflow: hidden;
+}
+
+.program-page-header::after {
+  content: "";
+
+  position: absolute;
+
+  right: 35px;
+  bottom: -22px;
+
+  width: 190px;
+  height: 55px;
+
+  border-top: 3px solid rgba(240, 169, 62, 0.28);
+
+  transform: rotate(-2deg);
+
+  pointer-events: none;
+}
+
+.program-heading {
+  position: relative;
+  z-index: 2;
+}
+
+/* =====================================================================
+     EYEBROW
+     ===================================================================== */
+
+.program-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 8px;
+  padding: 5px 9px;
+
+  background: #eef1fa;
+
+  color: #35507f;
+
+  border-radius: 5px;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.61rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.program-eyebrow span {
+  width: 6px;
+  height: 6px;
+
+  background: #f0a93e;
+
+  border-radius: 50%;
+}
+
+/* =====================================================================
+     TITLE
+     ===================================================================== */
+
+.program-heading h1 {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0 0 8px;
+
+  color: #101d33;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 2rem;
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.035em;
+}
+
+.program-heading h1::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -3px;
+
+  width: 55%;
+
+  height: 8px;
+
+  background: rgba(240, 169, 62, 0.4);
+
+  border-radius: 3px;
+
+  z-index: -1;
+
+  transform: rotate(-1deg);
+}
+
+.program-heading p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #737e93;
+
+  font-size: 0.77rem;
+
+  line-height: 1.65;
+}
+
+/* =====================================================================
+     ADD BUTTON
+     ===================================================================== */
+
+.btn-add {
+  position: relative;
+  z-index: 3;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 44px;
+
+  padding: 0 17px;
+
+  background: #f0a93e;
+
+  color: #654208;
+
+  border: 1px solid #e4a039;
+
+  border-radius: 9px;
+
+  font-size: 0.76rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 16px rgba(240, 169, 62, 0.2);
+
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-add:hover {
+  background: #eda02c;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 9px 20px rgba(240, 169, 62, 0.27);
+}
+
+.program-plus {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* =====================================================================
+     TOOLBAR
+     ===================================================================== */
+
+.program-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+  padding: 14px 18px;
+
+  background: #f8f9fc;
+
+  border: 1px solid #e2e6f0;
+
+  border-radius: 11px;
+}
+
+.program-toolbar-info {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+.program-count-icon {
+  width: 37px;
+  height: 37px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef1fa;
+
+  border: 1px solid #dce2ef;
+
+  border-radius: 9px;
+
+  font-size: 1rem;
+}
+
+.program-toolbar-info strong {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #263653;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 0.74rem;
+}
+
+.program-toolbar-info span {
+  color: #8a93a5;
+
+  font-size: 0.61rem;
+}
+
+.program-status {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #718093;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.59rem;
+}
+
+.program-status span {
+  width: 6px;
+  height: 6px;
+
+  background: #35a57f;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 3px rgba(53, 165, 127, 0.12);
+}
+
+/* =====================================================================
+     TABLE CARD
+     ===================================================================== */
+
+.program-table-card {
+  position: relative;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe4f2;
+
+  border-radius: 15px;
+
+  box-shadow: 0 4px 18px rgba(16, 29, 51, 0.045);
+
+  overflow: hidden;
+}
+
+.program-table-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 28px;
+
+  width: 72px;
+  height: 4px;
+
+  background: #f0a93e;
+
+  border-radius: 0 0 4px 4px;
+
+  z-index: 2;
+}
+
+/* =====================================================================
+     TABLE
+     ===================================================================== */
+
+.program-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.program-table {
+  width: 100%;
+
+  min-width: 750px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+/* COLUMN WIDTH */
+
+.program-table th:nth-child(1) {
+  width: 65px;
+}
+
+.program-table th:nth-child(2) {
+  width: 38%;
+}
+
+.program-table th:nth-child(3) {
+  width: 18%;
+}
+
+.program-table th:nth-child(4) {
+  width: 17%;
+}
+
+.program-table th:nth-child(5) {
+  width: 180px;
+}
+
+/* =====================================================================
+     TABLE HEADER
+     ===================================================================== */
+
+.program-table thead {
+  background: #f7f8fc;
+}
+
+.program-table th {
+  height: 55px;
+
+  padding: 0 17px;
+
+  color: #67738a;
+
+  border-bottom: 1px solid #e0e5ef;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.6rem;
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+
+  text-align: left;
+
+  text-transform: uppercase;
+}
+
+.program-table .program-no {
+  text-align: center;
+}
+
+.program-action-head {
+  text-align: center !important;
+}
+
+/* =====================================================================
+     TABLE ROW
+     ===================================================================== */
+
+.program-table tbody tr {
+  transition: background 0.18s ease;
+}
+
+.program-table tbody tr:hover {
+  background: #fcfcfe;
+}
+
+.program-table td {
+  height: 82px;
+
+  padding: 10px 17px;
+
+  color: #4e5b73;
+
+  border-bottom: 1px solid #edf0f5;
+
+  font-size: 0.71rem;
+
+  vertical-align: middle;
+}
+
+.program-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =====================================================================
+     NUMBER
+     ===================================================================== */
+
+.program-number {
+  color: #9ba4b4 !important;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.63rem !important;
+
+  text-align: center;
+}
+
+/* =====================================================================
+     PROGRAM NAME
+     ===================================================================== */
+
+.program-name-cell {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  min-width: 0;
+}
+
+.program-icon {
+  width: 39px;
+  height: 39px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff5e4;
+
+  border: 1px solid #f4dfb9;
+
+  border-radius: 9px;
+
+  font-size: 0.95rem;
+}
+
+.program-name-cell > div:last-child {
+  min-width: 0;
+}
+
+.program-name-cell strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #263653;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.program-name-cell span {
+  display: block;
+
+  color: #a0a8b6;
+
+  font-size: 0.59rem;
+}
+
+/* =====================================================================
+     PRICE
+     ===================================================================== */
+
+.program-price {
+  color: #263653;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.69rem;
+  font-weight: 700;
+}
+
+/* =====================================================================
+     DURATION
+     ===================================================================== */
+
+.duration-badge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 6px 9px;
+
+  background: #f5f6fa;
+
+  color: #5e6a80;
+
+  border: 1px solid #e4e7ef;
+
+  border-radius: 6px;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.58rem;
+}
+
+/* =====================================================================
+     ACTION
+     ===================================================================== */
+
+.program-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+}
+
+.program-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  min-height: 31px;
+
+  padding: 0 10px;
+
+  border-radius: 6px;
+
+  font-size: 0.6rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: transform 0.18s ease, background 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.program-actions button:hover {
+  transform: translateY(-1px);
+}
+
+.btn-edit {
+  background: #f3f6fb;
+
+  color: #3e5e8d;
+
+  border: 1px solid #dce4f0;
+}
+
+.btn-edit:hover {
+  background: #eaf0f9;
+
+  border-color: #cbd8e9;
+}
+
+.btn-delete {
+  background: #fff3f1;
+
+  color: #bd5a50;
+
+  border: 1px solid #f1d6d2;
+}
+
+.btn-delete:hover {
+  background: #ffe9e6;
+
+  border-color: #e9c1bc;
+}
+
+.program-actions button span {
+  font-size: 0.75rem;
+}
+
+/* =====================================================================
+     EMPTY STATE
+     ===================================================================== */
+
+.program-empty {
+  height: 360px !important;
+
+  padding: 50px 20px !important;
+
+  text-align: center !important;
+}
+
+.empty-program-icon {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 13px;
+
+  background: #f5f6fa;
+
+  border: 1px dashed #d4dbe8;
+
+  border-radius: 14px;
+
+  font-size: 1.4rem;
+}
+
+.program-empty strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #5d6980;
+
+  font-family: "Space Grotesk", "Inter", sans-serif;
+
+  font-size: 0.82rem;
+}
+
+.program-empty span {
+  display: block;
+
+  margin-bottom: 17px;
+
+  color: #9aa2b1;
+
+  font-size: 0.66rem;
+}
+
+.empty-add-program {
+  min-height: 35px;
+
+  padding: 0 13px;
+
+  background: #f0a93e;
+
+  color: #69470c;
+
+  border: 1px solid #e5a23a;
+
+  border-radius: 7px;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.empty-add-program:hover {
+  background: #eda02c;
+
+  transform: translateY(-1px);
+}
+
+/* =====================================================================
+     FOOTER
+     ===================================================================== */
+
+.program-table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 48px;
+
+  padding: 0 19px;
+
+  background: #fafbfc;
+
+  border-top: 1px solid #e7eaf1;
+
+  color: #939baa;
+
+  font-size: 0.61rem;
+}
+
+.program-table-footer strong {
+  color: #536078;
+
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.program-system-status {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 0.56rem;
+}
+
+.program-system-status i {
+  width: 6px;
+  height: 6px;
+
+  background: #35a57f;
+
+  border-radius: 50%;
+}
+
+/* =====================================================================
+     TABLET
+     ===================================================================== */
+
+@media (max-width: 1000px) {
+  .program-page-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .btn-add {
+    align-self: flex-start;
+  }
+}
+
+/* =====================================================================
+     MOBILE
+     ===================================================================== */
+
+@media (max-width: 650px) {
+  .program-page-header {
+    padding: 22px 19px;
+
+    border-radius: 14px;
+  }
+
+  .program-heading h1 {
+    font-size: 1.7rem;
+  }
+
+  .program-heading p {
+    font-size: 0.7rem;
+  }
+
+  .btn-add {
+    width: 100%;
+  }
+
+  .program-toolbar {
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 12px 14px;
+  }
+
+  .program-status {
+    display: none;
+  }
+
+  .program-table {
+    min-width: 750px;
+  }
+
+  .program-table th {
+    height: 50px;
+
+    padding: 0 12px;
+  }
+
+  .program-table td {
+    height: 72px;
+
+    padding: 9px 12px;
+  }
+
+  .program-table-footer {
+    padding: 0 14px;
+  }
+}
+
+/* =====================================================================
+     ACCESSIBILITY
+     ===================================================================== */
+
+.program-page button:focus-visible {
+  outline: 3px solid rgba(240, 169, 62, 0.55);
+
+  outline-offset: 2px;
+}

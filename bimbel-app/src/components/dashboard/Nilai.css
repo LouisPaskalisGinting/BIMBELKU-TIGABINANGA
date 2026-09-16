@@ -1,0 +1,243 @@
+/* =========================================================
+   UPLOAD NILAI - ORANGE PROFESSIONAL THEME
+========================================================= */
+
+.upload-nilai-page,
+.upload-nilai-page * {
+  box-sizing: border-box;
+}
+
+.upload-nilai-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 32px;
+  background-color: #f8fafc;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  color: #1e293b;
+}
+
+/* HEADER TITLE */
+.upload-nilai-page h1 {
+  margin: 0 0 28px 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+/* CARDS (FORM CARD & FILE CARD) */
+.upload-card,
+.file-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  margin-bottom: 28px;
+  max-width: 800px;
+}
+
+.upload-card h2,
+.file-card h2 {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  border-bottom: 2px solid #fff7ed;
+  padding-bottom: 10px;
+}
+
+/* FORM STYLING */
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* INPUT SELECT & FILE */
+.form-group select,
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 11px 14px;
+  font-size: 14px;
+  color: #1e293b;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-group select:focus,
+.form-group input[type="file"]:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+}
+
+/* CUSTOM FILE INPUT BUTTON STYLING */
+.form-group input[type="file"]::file-selector-button {
+  padding: 6px 12px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #fff7ed;
+  color: #c2410c;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form-group input[type="file"]::file-selector-button:hover {
+  background-color: #ffedd5;
+}
+
+/* FILE NAME INFORMATIONAL TEXT */
+.file-name {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ea580c;
+  background-color: #fff7ed;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px dashed #fed7aa;
+  display: inline-block;
+}
+
+/* BUTTON UPLOAD */
+.btn-upload {
+  align-self: flex-start;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #f97316;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(249, 115, 22, 0.25);
+  margin-top: 4px;
+}
+
+.btn-upload:hover:not(:disabled) {
+  background-color: #ea580c;
+  transform: translateY(-1px);
+}
+
+.btn-upload:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* LIST FILE NILAI */
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.file-item:hover {
+  border-color: #fed7aa;
+  background-color: #fffaf5;
+}
+
+.file-item h3 {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.file-item p {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* BUTTON BUKA FILE */
+.btn-open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ea580c;
+  background-color: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-open:hover {
+  background-color: #f97316;
+  color: #ffffff;
+  border-color: #f97316;
+}
+
+/* EMPTY STATE */
+.empty-file {
+  padding: 32px 16px;
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
+  background-color: #f8fafc;
+  border: 2px dashed #e2e8f0;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 640px) {
+  .upload-nilai-page {
+    padding: 16px;
+  }
+
+  .upload-card,
+  .file-card {
+    padding: 20px;
+  }
+
+  .btn-upload {
+    width: 100%;
+  }
+
+  .file-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .btn-open {
+    width: 100%;
+  }
+}

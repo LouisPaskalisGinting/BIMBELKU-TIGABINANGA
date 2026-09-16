@@ -1,0 +1,560 @@
+/* =========================================
+   TESTIMONIAL MANAGEMENT
+   Prefix: tst-
+   Tema: Orange Professional
+   ========================================= */
+
+.tst-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px;
+  background: #f8fafc;
+  color: #1f2937;
+  box-sizing: border-box;
+}
+
+/* =========================================
+     HEADER
+     ========================================= */
+
+.tst-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.tst-header-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tst-header-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+}
+
+.tst-header-icon span {
+  color: #f97316;
+  font-size: 23px;
+}
+
+.tst-header h1 {
+  margin: 0 0 5px;
+  color: #1f2937;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.tst-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================================
+     BUTTON TAMBAH
+     ========================================= */
+
+.tst-btn-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 43px;
+  padding: 0 17px;
+  border: 1px solid #f97316;
+  border-radius: 8px;
+  background: #f97316;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(249, 115, 22, 0.18);
+  transition: 0.2s ease;
+}
+
+.tst-btn-add:hover {
+  background: #ea580c;
+  border-color: #ea580c;
+  transform: translateY(-1px);
+}
+
+.tst-btn-icon {
+  font-size: 19px;
+  line-height: 1;
+}
+
+/* =========================================
+     SUMMARY
+     ========================================= */
+
+.tst-summary {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.tst-summary-card {
+  width: 230px;
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 18px;
+  box-sizing: border-box;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.05);
+}
+
+.tst-summary-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #fff7ed;
+  color: #f97316;
+  font-size: 19px;
+}
+
+.tst-summary-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.tst-summary-label {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.tst-summary-info strong {
+  color: #1f2937;
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* =========================================
+     CARD
+     ========================================= */
+
+.tst-card {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+}
+
+.tst-card-header {
+  display: flex;
+  align-items: center;
+  padding: 21px 24px;
+  border-left: 4px solid #f97316;
+  border-bottom: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, #fff7ed, #ffffff);
+}
+
+.tst-card-header h2 {
+  margin: 0 0 5px;
+  color: #1f2937;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.tst-card-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* =========================================
+     TABLE
+     ========================================= */
+
+.tst-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tst-table {
+  width: 100%;
+  min-width: 950px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.tst-table thead {
+  background: #f9fafb;
+}
+
+.tst-table th {
+  height: 48px;
+  padding: 0 14px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #4b5563;
+  text-align: left;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tst-table td {
+  min-height: 70px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #374151;
+  vertical-align: middle;
+}
+
+.tst-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.tst-table tbody tr:hover {
+  background: #fffaf5;
+}
+
+.tst-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tst-col-no {
+  width: 50px;
+  text-align: center !important;
+}
+
+.tst-col-foto {
+  width: 80px;
+}
+
+.tst-col-action {
+  width: 165px;
+}
+
+/* =========================================
+     TABLE CONTENT
+     ========================================= */
+
+.tst-number {
+  text-align: center;
+  color: #6b7280 !important;
+  font-weight: 600;
+}
+
+.tst-name {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.tst-text {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.tst-message-cell {
+  max-width: 280px;
+}
+
+.tst-message {
+  display: block;
+  max-width: 280px;
+  overflow: hidden;
+  color: #6b7280;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================================
+     FOTO
+     ========================================= */
+
+.tst-photo-wrapper {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border: 2px solid #fed7aa;
+  border-radius: 10px;
+  background: #fff7ed;
+}
+
+.tst-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tst-no-photo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f9fafb;
+}
+
+.tst-no-photo span {
+  font-size: 19px;
+}
+
+/* =========================================
+     ACTION BUTTON
+     ========================================= */
+
+.tst-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.tst-btn-edit,
+.tst-btn-delete {
+  min-height: 34px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tst-btn-edit {
+  border: 1px solid #fdba74;
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.tst-btn-edit:hover {
+  background: #ffedd5;
+  border-color: #fb923c;
+}
+
+.tst-btn-delete {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.tst-btn-delete:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+/* =========================================
+     FOOTER
+     ========================================= */
+
+.tst-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 13px 20px;
+  border-top: 1px solid #e5e7eb;
+  background: #fafafa;
+}
+
+.tst-card-footer span {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.tst-card-footer strong {
+  color: #f97316;
+}
+
+/* =========================================
+     EMPTY STATE
+     ========================================= */
+
+.tst-empty {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 30px;
+  color: #6b7280;
+}
+
+.tst-empty-icon {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff7ed;
+  color: #f97316;
+  font-size: 24px;
+}
+
+.tst-empty strong {
+  color: #374151;
+  font-size: 15px;
+}
+
+.tst-empty span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.tst-empty-button {
+  margin-top: 10px;
+  min-height: 36px;
+  padding: 0 13px;
+  border: 1px solid #f97316;
+  border-radius: 7px;
+  background: #f97316;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tst-empty-button:hover {
+  background: #ea580c;
+}
+
+/* =========================================
+     LOADING
+     ========================================= */
+
+.tst-loading {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.tst-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #fed7aa;
+  border-top-color: #f97316;
+  border-radius: 50%;
+  animation: tst-spin 0.8s linear infinite;
+}
+
+@keyframes tst-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+     RESPONSIVE
+     ========================================= */
+
+@media (max-width: 900px) {
+  .tst-page {
+    padding: 22px 18px;
+  }
+
+  .tst-header {
+    align-items: flex-start;
+  }
+
+  .tst-header h1 {
+    font-size: 24px;
+  }
+
+  .tst-btn-add {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .tst-page {
+    padding: 18px 14px;
+  }
+
+  .tst-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tst-header-content {
+    align-items: flex-start;
+  }
+
+  .tst-header-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .tst-header h1 {
+    font-size: 22px;
+  }
+
+  .tst-header p {
+    font-size: 12px;
+  }
+
+  .tst-btn-add {
+    width: 100%;
+  }
+
+  .tst-summary-card {
+    width: 100%;
+  }
+
+  .tst-card-header {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tst-page {
+    padding: 14px 10px;
+  }
+
+  .tst-header-content {
+    gap: 10px;
+  }
+
+  .tst-card {
+    border-radius: 11px;
+  }
+
+  .tst-summary-card {
+    min-height: 72px;
+  }
+
+  .tst-table {
+    min-width: 900px;
+  }
+}

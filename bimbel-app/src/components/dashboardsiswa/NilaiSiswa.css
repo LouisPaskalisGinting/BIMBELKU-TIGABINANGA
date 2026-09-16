@@ -1,0 +1,975 @@
+/* =========================================================
+   NILAI SISWA
+   THEME: NAVY + AMBER + WHITE
+   ========================================================= */
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+     BODY
+     ========================================================= */
+
+body {
+  margin: 0;
+
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+
+  background: #f7f8fc;
+
+  color: #1b2233;
+}
+
+/* =========================================================
+     CONTAINER
+     ========================================================= */
+
+.nilai-siswa-container {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 30px;
+
+  background: linear-gradient(
+    rgba(247, 248, 252, 0.96),
+    rgba(247, 248, 252, 0.96)
+  );
+}
+
+/* =========================================================
+     MAIN CARD
+     ========================================================= */
+
+.nilai-siswa-card {
+  width: 100%;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe4f2;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(16, 29, 51, 0.07);
+}
+
+/* =========================================================
+     HEADER
+     ========================================================= */
+
+.nilai-siswa-header {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 24px;
+
+  margin-bottom: 24px;
+
+  border-bottom: 1px solid #e1e5ef;
+}
+
+/* Garis amber kecil */
+
+.nilai-siswa-header::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -2px;
+
+  width: 85px;
+
+  height: 4px;
+
+  background: #f0a93e;
+
+  border-radius: 0 0 4px 4px;
+}
+
+/* =========================================================
+     TITLE
+     ========================================================= */
+
+.nilai-siswa-title {
+  margin: 0;
+
+  color: #101d33;
+
+  font-family: "Space Grotesk", "Segoe UI", Arial, sans-serif;
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.4px;
+}
+
+.nilai-siswa-header p {
+  margin: 7px 0 0;
+
+  color: #788196;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+     REFRESH BUTTON
+     ========================================================= */
+
+.refresh-btn {
+  height: 42px;
+
+  padding: 0 18px;
+
+  border: 1px solid #16274a;
+
+  border-radius: 10px;
+
+  background: #16274a;
+
+  color: #ffffff;
+
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.refresh-btn:hover {
+  background: #243b66;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 15px rgba(22, 39, 74, 0.18);
+}
+
+/* =========================================================
+     INFORMASI SISWA
+     ========================================================= */
+
+.nilai-siswa-info {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.info-item {
+  position: relative;
+
+  min-height: 90px;
+
+  padding: 18px;
+
+  background: #f8f9fc;
+
+  border: 1px solid #e0e4ef;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+/* Garis kecil */
+
+.info-item::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 4px;
+
+  height: 100%;
+
+  background: #f0a93e;
+}
+
+.info-item span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #7c8497;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.3px;
+}
+
+.info-item strong {
+  display: block;
+
+  color: #16274a;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+     FILTER
+     ========================================================= */
+
+.nilai-filter {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  width: 100%;
+
+  margin-bottom: 28px;
+}
+
+.nilai-filter label {
+  color: #16274a;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.nilai-filter select {
+  width: 100%;
+
+  height: 48px;
+
+  padding: 0 15px;
+
+  border: 1px solid #d8deeb;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #16274a;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nilai-filter select:hover {
+  border-color: #b9c2d5;
+}
+
+.nilai-filter select:focus {
+  border-color: #35507f;
+
+  box-shadow: 0 0 0 3px rgba(53, 80, 127, 0.1);
+}
+
+.nilai-filter select:disabled {
+  background: #f2f4f8;
+
+  color: #9299a8;
+
+  cursor: not-allowed;
+}
+
+/* =========================================================
+     SECTION
+     ========================================================= */
+
+.nilai-section {
+  margin-top: 25px;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe4f2;
+
+  border-radius: 16px;
+}
+
+.file-section {
+  margin-top: 20px;
+}
+
+/* =========================================================
+     SECTION HEADER
+     ========================================================= */
+
+.section-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 18px;
+}
+
+.section-header h2 {
+  margin: 0;
+
+  color: #101d33;
+
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+
+  font-size: 19px;
+
+  font-weight: 700;
+}
+
+.section-header p {
+  margin: 5px 0 0;
+
+  color: #7b8497;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+     TABLE WRAPPER
+     ========================================================= */
+
+.nilai-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid #dfe4f2;
+
+  border-radius: 12px;
+}
+
+/* =========================================================
+     TABLE
+     ========================================================= */
+
+.nilai-table {
+  width: 100%;
+
+  min-width: 550px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+/* =========================================================
+     TABLE HEADER
+     ========================================================= */
+
+.nilai-table thead th {
+  height: 50px;
+
+  padding: 0 16px;
+
+  background: #eef1fa;
+
+  border-bottom: 1px solid #d9deeb;
+
+  color: #16274a;
+
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-align: left;
+}
+
+/* No */
+
+.nilai-table th:first-child,
+.nilai-table td:first-child {
+  width: 70px;
+
+  text-align: center;
+}
+
+/* Nama */
+
+.nilai-table th:nth-child(2),
+.nilai-table td:nth-child(2) {
+  width: auto;
+}
+
+/* Nilai */
+
+.nilai-table th:last-child,
+.nilai-table td:last-child {
+  width: 150px;
+
+  text-align: center;
+}
+
+/* =========================================================
+     TABLE BODY
+     ========================================================= */
+
+.nilai-table tbody tr {
+  background: #ffffff;
+
+  transition: background 0.2s ease;
+}
+
+.nilai-table tbody tr:hover {
+  background: #f8f9fc;
+}
+
+.nilai-table tbody td {
+  height: 58px;
+
+  padding: 12px 16px;
+
+  border-bottom: 1px solid #e6e9f0;
+
+  color: #43516c;
+
+  font-size: 13px;
+
+  vertical-align: middle;
+}
+
+.nilai-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================================
+     NILAI ANGKA
+     ========================================================= */
+
+.nilai-angka {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 55px;
+
+  height: 32px;
+
+  padding: 0 12px;
+
+  border-radius: 8px;
+
+  background: #16274a;
+
+  color: #ffffff;
+
+  font-family: "IBM Plex Mono", monospace;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+     EMPTY
+     ========================================================= */
+
+.nilai-empty {
+  padding: 35px 20px;
+
+  text-align: center;
+
+  background: #fafbfc;
+
+  color: #858d9f;
+
+  font-size: 13px;
+}
+
+.nilai-empty h2,
+.nilai-empty h3 {
+  margin: 8px 0 6px;
+
+  color: #16274a;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 18px;
+}
+
+.nilai-empty p {
+  max-width: 500px;
+
+  margin: 0 auto;
+
+  color: #858d9f;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.empty-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 55px;
+
+  height: 55px;
+
+  margin: 0 auto 12px;
+
+  border-radius: 15px;
+
+  background: #fff4df;
+
+  font-size: 25px;
+}
+
+/* =========================================================
+     LOADING
+     ========================================================= */
+
+.nilai-loading {
+  padding: 45px 20px;
+
+  text-align: center;
+}
+
+.nilai-loading h2 {
+  margin: 0 0 8px;
+
+  color: #16274a;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 18px;
+}
+
+.nilai-loading p {
+  margin: 0;
+
+  color: #858d9f;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+     ERROR
+     ========================================================= */
+
+.nilai-error {
+  padding: 15px 18px;
+
+  border: 1px solid #efcaca;
+
+  border-radius: 10px;
+
+  background: #fff4f4;
+
+  color: #b33d3d;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+     FILE LIST
+     ========================================================= */
+
+.file-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+/* =========================================================
+     FILE CARD
+     ========================================================= */
+
+.file-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-height: 75px;
+
+  padding: 14px 16px;
+
+  background: #fafbfc;
+
+  border: 1px solid #dfe4f2;
+
+  border-radius: 13px;
+
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.file-card:hover {
+  background: #f6f8fc;
+
+  border-color: #ccd3e2;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+     FILE ICON
+     ========================================================= */
+
+.file-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 45px;
+
+  height: 45px;
+
+  border-radius: 11px;
+
+  background: #eef1fa;
+
+  font-size: 21px;
+}
+
+/* =========================================================
+     FILE INFO
+     ========================================================= */
+
+.file-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.file-info h3 {
+  margin: 0;
+
+  overflow: hidden;
+
+  color: #16274a;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.file-info p {
+  margin: 4px 0 0;
+
+  color: #8991a2;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+     FILE ACTIONS
+     ========================================================= */
+
+.file-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+/* =========================================================
+     FILE BUTTON GENERAL
+     ========================================================= */
+
+.file-view-btn,
+.file-download-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  height: 37px;
+
+  padding: 0 13px;
+
+  border-radius: 9px;
+
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* =========================================================
+     VIEW
+     ========================================================= */
+
+.file-view-btn {
+  background: #16274a;
+
+  border: 1px solid #16274a;
+
+  color: #ffffff;
+}
+
+.file-view-btn:hover {
+  background: #243b66;
+
+  border-color: #243b66;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+     DOWNLOAD
+     ========================================================= */
+
+.file-download-btn {
+  background: #f0a93e;
+
+  border: 1px solid #f0a93e;
+
+  color: #654408;
+}
+
+.file-download-btn:hover {
+  background: #d98a1f;
+
+  border-color: #d98a1f;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+     RETRY BUTTON
+     ========================================================= */
+
+.retry-btn {
+  height: 40px;
+
+  margin-top: 15px;
+
+  padding: 0 18px;
+
+  border: 1px solid #16274a;
+
+  border-radius: 9px;
+
+  background: #16274a;
+
+  color: #ffffff;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.retry-btn:hover {
+  background: #243b66;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+     RESPONSIVE 900px
+     ========================================================= */
+
+@media (max-width: 900px) {
+  .nilai-siswa-container {
+    padding: 24px;
+  }
+
+  .nilai-siswa-card {
+    padding: 22px;
+  }
+
+  .nilai-siswa-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .file-card {
+    align-items: flex-start;
+  }
+}
+
+/* =========================================================
+     RESPONSIVE 700px
+     ========================================================= */
+
+@media (max-width: 700px) {
+  .nilai-siswa-container {
+    padding: 18px;
+  }
+
+  .nilai-siswa-card {
+    padding: 18px;
+  }
+
+  .nilai-siswa-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .refresh-btn {
+    width: 100%;
+  }
+
+  .nilai-siswa-title {
+    font-size: 26px;
+  }
+
+  .nilai-siswa-info {
+    grid-template-columns: 1fr;
+  }
+
+  .nilai-section {
+    padding: 16px;
+  }
+
+  .section-header {
+    flex-direction: column;
+  }
+
+  .file-card {
+    flex-wrap: wrap;
+  }
+
+  .file-info {
+    width: calc(100% - 60px);
+
+    flex: none;
+  }
+
+  .file-actions {
+    width: 100%;
+
+    padding-left: 59px;
+  }
+
+  .file-view-btn,
+  .file-download-btn {
+    flex: 1;
+  }
+}
+
+/* =========================================================
+     RESPONSIVE 480px
+     ========================================================= */
+
+@media (max-width: 480px) {
+  .nilai-siswa-container {
+    padding: 12px;
+  }
+
+  .nilai-siswa-card {
+    padding: 15px;
+
+    border-radius: 15px;
+  }
+
+  .nilai-siswa-title {
+    font-size: 23px;
+  }
+
+  .nilai-siswa-header p {
+    font-size: 12px;
+  }
+
+  .info-item {
+    min-height: 80px;
+
+    padding: 15px;
+  }
+
+  .nilai-section {
+    padding: 13px;
+
+    border-radius: 13px;
+  }
+
+  .section-header h2 {
+    font-size: 17px;
+  }
+
+  .nilai-table {
+    min-width: 500px;
+  }
+
+  .file-card {
+    padding: 13px;
+  }
+
+  .file-actions {
+    padding-left: 0;
+  }
+}
