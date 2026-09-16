@@ -14,7 +14,7 @@ const db = mysql.createConnection({
 
 db.connect((err) => {
   if (err) {
-    console.error("MySQL Error:", err);
+    console.error("MySQL Aiven Error:", err);
   } else {
     console.log("MySQL Aiven Connected");
   }
